@@ -8,11 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--====== Title ======-->
     <title>Title here</title>
-    <!--====== Google Fonts ======-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="#" type="image/png">
     <!--====== Bootstrap css ======-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!--====== Animate css ======-->
@@ -22,6 +19,8 @@
     <link href="assets/css/ionicons.min.css" rel="stylesheet">
     <!--====== Owl carousel css ======-->
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
     <!--====== Nice-select css ======-->
     <link href="assets/css/nice-select.css" rel="stylesheet">
     <!--====== Style css ======-->
@@ -57,81 +56,652 @@
     </div>
     <!-- Preloader End -->
     <div class="page_wrapper">
-        <!-- Header bar area Start -->
-        <div class="header-bar-area">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-3">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                    <div class="col-lg-9 text-right">
-                        <ul id="mainNav" class="main-menu pb-2 pb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#features_wrap">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#testimonial_wrap">TESTIMONIALS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#stat_wrap">KEY STATISTICS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#preass_wrap">PRESS</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#partner_wrap">PARTNERS & INVESTORS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#team_wrap">TEAM</a></li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#contact_wrap"> CONTACT US </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn v1">Download</a>
-                            </li>
-                        </ul>
+        <div class="body_overlay"></div>
+        <!-- Header start -->
+        <header class="header-wrap">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo.svg" alt="Image"></a>
+                </div>
+                <div class="header-menu">
+                    <div class="main-menu">
                         <div class="hamburger-menu">
-                            <span class="line-top"></span>
-                            <span class="line-center"></span>
-                            <span class="line-bottom"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul>
+                            <li><a class="active" href="index.html">Dashboard</a></li>
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="fracture.html">Facture</a></li>
+                            <li><a href="formation.html">Formation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-notification">
+                    <a href="#" class="btn v1">Nouvelle mission</a>
+                    <div class="notifi-icon">
+                        <img src="assets/img/notification.png" alt="Image">
+                        <div class="notif-list">
+                            <ul>
+                                <li><a href="#">
+                                        <span>24 NOVEMBRE À 16H
+                                        </span>
+                                        Livraison du projet Sixt
+                                    </a></li>
+                                <li><a href="#">
+                                        <span>24 NOVEMBRE À 16H
+                                        </span>
+                                        Livraison du projet Valophis
+                                    </a></li>
+                                <li><a href="#">
+                                        <span>24 NOVEMBRE À 16H
+                                        </span>
+                                        Vous avez un nouveaux messages de Martin Macaigne
+                                    </a></li>
+                                <li><a href="#">
+                                        <span>24 NOVEMBRE À 16H</span>
+                                        Livraison du projet Sixt
+                                    </a></li>
+                            </ul>
+                            <div class="view-more">
+                                <a href="#">VOIR PLUS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-option">
+                    <div class="client-logo">
+                        <img src="assets/img/client-logo-2.png" alt="Image">
+                    </div>
+                    <div class="client-menu">
+                        Dylan Nadjar--Aubry
+                        <span>STUDIO GUARANA</span>
+                        <ul>
+                            <li><a href="#">ENTREPRISE</a></li>
+                            <li><a href="#">COLLABORATEUR</a></li>
+                            <li><a href="#">DÉCONNEXION</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Hero section start -->
+        <section class="hero-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="hero-content">
+                            <img src="assets/img/client-logo-2.png" alt="Image">
+                            <h1>Bienvenue sur votre Dashboard Dylan. :)
+                            </h1>
+                            <div class="step-wrap">
+                                <div class="step-title">
+                                    <p>Votre niveau Sagyoo <img src="assets/img/help.svg" alt="Image"></p>
+                                    <span>Niveau 12</span>
+                                </div>
+                                <span class="step-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="working-hours">
+                            <div class="working-hours-left">
+                                <p>NOMBRE D’HEURE <span>TRAVAILLÉS CE MOIS-CI</span></p>
+                            </div>
+                            <div class="working-hours-right">
+                                <h6>204 heures</h6>
+                            </div>
+                        </div>
+                        <div class="working-hours">
+                            <div class="working-hours-left">
+                                <p>NOMBRE DE MISSIONS <span>CE MOIS-CI</span></p>
+                            </div>
+                            <div class="working-hours-right">
+                                <h6>42 missions</h6>
+                            </div>
+                        </div>
+                        <div class="working-hours">
+                            <div class="working-hours-left">
+                                <p>NOMBRE DE MISSIONS <span>EN COURS</span></p>
+                            </div>
+                            <div class="working-hours-right">
+                                <h6>8 missions</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Header bar area End -->
-        <!-- Ofcanvas-menu -->
-        <div class="ofcavas-menu">
-            <ul id="mainNav" class="navbar-nav ml-auto pb-2 pb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#features_wrap">FEATURES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#testimonial_wrap">TESTIMONIALS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#stat_wrap">KEY STATISTICS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#preass_wrap">PRESS</a></li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#partner_wrap">PARTNERS & INVESTORS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#team_wrap">TEAM</a></li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact_wrap"> CONTACT US </a>
-                </li>
-                <li>
-                    <a href="#" class="btn v1"><img src="assets/img/icon-android.png" alt="Image"></a>
-                </li>
-            </ul>
-        </div>
-        <!-- Ofcanvas-menu END-->
-        
-      
-        
+        </section>
+        <!-- Hero section end -->
+        <!-- Mission section start -->
+        <section class="mission-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h2>Vos missions
+                            </h2>
+                            <p>
+                                Découvrez vos dernières missions, <span>en cours, en brouillon, terminés. </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="filter-btn">
+                            <a href="#">EN COURS</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <a href="#" class="btn v2">VOIR TOUS VOS PROJETS EN COURS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mission-slider-wrap">
+                <div class="mission-slider-one">
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mission section ends -->
+        <!-- Cta section start -->
+        <section class="cta-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cta-text">
+                            <h3>Une question ? Besoin d’aide pour vendre une prestation ? Contactez votre account manager.</h3>
+                            <a href="#" class="btn v5">CONTACTER MON ACCOUNT MANAGER</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="support-info">
+                            <img src="assets/img/avatar-1.png" alt="Image">
+                            <h4>MARTIN MACAIGNE
+                            </h4>
+                            <a href="mailto:martin.m@sagyoo.com">martin.m@sagyoo.com
+                            </a>
+                            <a href="tel:0606656094">06 06 65 60 94</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cta section end -->
+        <!-- Mission section start -->
+        <section class="mission-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="filter-btn">
+                            <a href="#">BROUILLONS</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <a href="#" class="btn v2">VOIR TOUS VOS PROJETS EN COURS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mission-slider-wrap">
+                <div class="mission-slider-one">
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                    <div class="mission-slider-item">
+                        <img src="assets/img/client-logo-1.jpg" alt="Image">
+                        <div class="mission-item-title">
+                            <h4>LA COMPAGNIE FRANÇAISE DES GRANDS VINS</h4>
+                            <h5>Refonte des visuels réseaux sociaux 2021</h5>
+                            <h6>KST-1483930</h6>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Deadline :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <p>16 novembre 2020 à 16h30</p>
+                            </div>
+                        </div>
+                        <div class="mission-item-info">
+                            <div class="mission-item-info-left">
+                                <p>Statut de la mission :</p>
+                            </div>
+                            <div class="mission-item-info-left">
+                                <span>EN COURS</span>
+                            </div>
+                        </div>
+                        <div class="mission-action-btn">
+                            <a href="#" class="btn v3">CONSULTER LE PROJET</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mission section ends -->
+        <!-- promo section start -->
+        <section class="user-mission-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h2>Les collaborateurs de Studio Guarana
+                            </h2>
+                            <p>
+                                Découvrez la <span>liste de vos collaborateurs,</span> ajoutez-en, supprimez-en.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="user-mission-wrap">
+                            <div class="user-mission-item">
+                                <h4>Inviter vos collaborateurs <br>à rejoindre l’équipe <br>
+                                    STUDIO GUARANA</h4>
+                                <a href="#" class="btn v1">AJOUTER UN COLLABORATEUR</a>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="user-mission-item">
+                                <img src="assets/img/close.svg" alt="Image" class="close-item">
+                                <div class="user-stat">
+                                    <h5>Dylan Nadjar-Aubry
+                                    </h5>
+                                    <p>Designer graphique
+                                    </p>
+                                </div>
+                                <div class="user-stat">
+                                </div>
+                                <div class="user-stat">
+                                    <h6>NOMBRE DE MISSIONS EN COURS :
+                                    </h6>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- promo section end -->
+        <!-- Footer start -->
+        <footer class="footer-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="assets/img/logo-wgite.svg" alt="Image"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-right">
+                            <div class="copyright">
+                                <p>2020 © Sagyoo. Tous droits réservés.</p>
+                            </div>
+                            <ul class="footer-menu">
+                                <li><a href="#"> Mentions légales</a></li>
+                                <li><a href="#"> CGV </a></li>
+                                <li><a href="#"> CGU </a></li>
+                                <li><a href="#"> Aide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
     </div>
     <!--====== BACK TO TOP START ======-->
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -149,7 +719,7 @@
     <!--======Nice-select js ======-->
     <script src="assets/js/jquery-nice-select.js"></script>
     <!--====== jquery sticky js ======-->
-    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 </body>

@@ -18,122 +18,46 @@
             sticky.addClass('sticky');
         }
     });
-    /*=========================
-      OwlCarousel START
-    ===========================*/
-    $(document).ready(function() {
-        if ($(window).width() < 768) {
-            startCarousel();
-        } else {
-            $('.owl-carousel').addClass('off');
-        }
+
+
+    $('.notifi-icon').on('click', function() {
+        $('.notif-list').toggleClass('open');
+        $('.body_overlay').toggleClass('open');
     });
-
-    $(window).resize(function() {
-        if ($(window).width() < 768) {
-            startCarousel();
-        } else {
-            stopCarousel();
-        }
+    $('.client-menu').on('click', function() {
+        $('.body_overlay').toggleClass('open');
+        $(this).toggleClass('open');
     });
+    // $('.body_overlay').on('click', function() {
+    //     if($('.client-menu').hasClass('open') && $('.notif-list').hasClass('open')){
+    //         $('.client-menu').removeClass('open');
+    //         $('.notif-list').removeClass('open');
+    //     }
 
-    function startCarousel() {
-        $(".testimonial_slider").owlCarousel({
-            items: 1,
-            nav: false,
-            dot: true,
-            autoplayTimeout: 2000,
-            loop: false,
-            margin: 4,
-            smartSpeed: 450,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dot: true
+    // });
 
-                },
-                767: {
-                    items: 1,
-                    nav: false,
-                    dot: true
-
-                },
-                1000: {
-                    items: 1,
-
-                }
+    //Slider 
+  
+    $('.mission-slider-one').slick({
+        slidesToShow: 4,
+        dots: true,
+        infinite: true,
+        arrows: false,
+        speed: 300,
+        // slidesToShow: 1,
+        // slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                centerMode: true,
+                slidesToShow: 1,
+                dots: true,
+                arrows: true,
+                swipe: true,
+                swipeToSlide: true,
             }
-        });
-         $(".press_slider").owlCarousel({
-            items: 1,
-            nav: false,
-            dot: true,
-            autoplayTimeout: 2000,
-            loop: false,
-            margin: 4,
-            smartSpeed: 450,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dot: true
-
-                },
-                767: {
-                    items: 1,
-                    nav: false,
-                    dot: true
-
-                },
-                1000: {
-                    items: 1,
-
-                }
-            }
-        });
-    }
-
-    function stopCarousel() {
-        var owl = $('.owl-carousel');
-        owl.trigger('destroy.owl.carousel');
-        owl.addClass('off');
-    }
-
-    $(".showcase_slider").owlCarousel({
-        items: 3,
-        nav: true,
-        dot: false,
-        autoplayTimeout: 2000,
-        loop: false,
-        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-        margin: 4,
-        smartSpeed: 450,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false,
-                dot: true
-
-            },
-            
-            768: {
-                items: 2,
-
-            },
-            1000: {
-                items: 3,
-
-            }
-        }
-
-
+        }]
     });
-
-
 
     // Show or hide the sticky footer button
     $(window).on('scroll', function(event) {
