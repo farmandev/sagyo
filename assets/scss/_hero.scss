@@ -1,0 +1,79 @@
+/*--------------------------------
+            Hero CSS
+---------------------------------*/
+
+.hero-slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .hero-slide-img {
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 65%;
+    }
+
+    .hero-slide-text {
+        background: #00BBB4;
+        width: 35%;
+        color: $clr_white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px 0 55px;
+
+        h1 {
+            font-family: "Fredoka One";
+            color: $clr_white;
+            font-size: 47px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: "Fredoka One";
+            display: block;
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-weight: 400;
+
+            span {
+                display: inline-block;
+                border-bottom: 2px solid #CDDE00;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+            }
+        }
+    }
+
+}
+
+.hero-slider-wrap .owl-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.hero-slider-wrap .owl-dot span,
+.award-logo-wrap .owl-dot span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: $clr_white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.hero-slider-wrap .owl-dot.active span,
+.award-logo-wrap .owl-dot.active span {
+    background: #F64747;
+}

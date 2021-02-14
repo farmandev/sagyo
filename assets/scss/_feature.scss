@@ -1,0 +1,42 @@
+/*--------------------------------
+            Feature CSS
+---------------------------------*/
+
+.feature-wrap {
+    padding: 20px 0 75px;
+
+    .feature-item-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .feature-item {
+            width: 25%;
+            text-align: center;
+            padding: 0 20px;
+
+            img {
+                margin: 0 auto;
+                max-width: 40px;
+            }
+
+            h5 {
+                font-size: 19px;
+                line-height: 26px;
+                font-weight: 600;
+                margin: 20px 0;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            a {
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+        }
+    }
+}

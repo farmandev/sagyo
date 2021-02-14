@@ -1,0 +1,70 @@
+/*--------------------------------
+            Showcase CSS
+---------------------------------*/
+
+.showcase-wrap {
+    position: relative;
+    padding: 50px 0;
+
+    .showcase-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .showcase-img {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .showcase-text {
+            width: 42%;
+            height: 100%;
+
+            span {
+                font-size: 19px;
+                line-height: 24px;
+                text-transform: capitalize;
+                display: block;
+                margin: 0 0 20px;
+            }
+
+            h3 {
+                font-family: "Fredoka One";
+                font-weight: 300;
+                font-size: 33px;
+                line-height: 40px;
+                margin: 0 0 30px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 22px;
+            }
+
+
+        }
+    }
+}
+.showcase-pagination {
+    position: absolute;
+    bottom: 120px;
+    left: 59.5%;
+    transform: translateX(-50%);
+
+    .swiper-pagination-bullet-active {
+        background: #F64747 !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #C4C4C4;
+        opacity: 1;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}

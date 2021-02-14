@@ -1,0 +1,30 @@
+/*--------------------------------
+            About CSS
+---------------------------------*/
+
+.about-wrap {
+    padding: 80px 0;
+
+    .about-text {
+        text-align: center;
+
+        span {
+            text-transform: uppercase;
+            font-family: "Fredoka One";
+            color: #00BBB4;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 33px;
+            line-height: 54px;
+            font-family: "Fredoka One";
+        }
+
+        p {
+            color: $clr_gr;
+            margin: 0 0 35px;
+        }
+    }
+}
