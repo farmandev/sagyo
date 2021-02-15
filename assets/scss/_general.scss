@@ -13,19 +13,6 @@ $clr_white: #fff;
 $clr_grey: #7E8299;
 $clr_ash:#F0F1FA;
 
-// Responsive Variables
-$xl_1: 'only screen and (min-width: 1920px)';
-$xl_2: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
-$xl_3: 'only screen and (min-width: 1440px) and (max-width: 1599px)';
-$xl_4: 'only screen and (min-width: 1280px) and (max-width: 1359px)';
-$laptop: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
-$lg_1 : 'only screen and (min-width: 992px) and (max-width: 1199px)';
-$lg_2 : 'only screen and (min-width: 992px)';
-$lg_3 : 'only screen and (min-width: 1200px) ';
-$md_1:'only screen and (max-width:991px)';
-$md_2:'only screen and (min-width: 768px) and (max-width: 991px)';
-$md_3:'only screen and (min-width:768px)';
-$sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 
 @font-face {
     font-family: 'Averta-Light';
@@ -99,8 +86,8 @@ h4,
 h5,
 h6 {
     margin-bottom: 10px;
-    line-height: 64px;
-    font-weight: 600;
+    line-height: 1.6;
+    font-family: "Averta-Bold";
 }
 
 body {
@@ -426,13 +413,15 @@ a:hover {
     }
 
     &.v2 {
-        font-size: 15px;
-        font-weight: 600;
-        text-transform: capitalize;
-        line-height: 18px;
-        border: 2px solid #00BBB4;
-        border-radius: 50px;
-        padding: 14px 35px;
+        font-size: 16px;
+        line-height: 21px;
+        color: #fff;
+        background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+        display: inline-block;
+        padding: 8px 21px 10px;
+        border: none;
+        border-radius: 7px;
+        box-shadow: none;
         transition: 0.3s;
 
         &:hover {
@@ -442,16 +431,18 @@ a:hover {
     }
 
     &.v3 {
-        font-size: 15px;
-        font-weight: 600;
-        text-transform: capitalize;
-        line-height: 18px;
-        background: #00BBB4;
-        border: 2px solid transparent;
-        border-radius: 50px;
-        padding: 14px 35px;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: "Averta-SemiBold";
+        color: $clr_blue;
+        background: transparent;
+        display: block;
+        width: 100%;
+        padding: 8px 21px 10px;
+        border: 1px solid $clr_blue;
+        border-radius: 5px;
+        box-shadow: none;
         transition: 0.3s;
-        color: $clr_white;
 
         &:hover {
             color: #00BBB4;
@@ -505,11 +496,18 @@ a:hover {
     text-align: center;
 
     h2 {
-        font-size: 33px;
-        line-height: 120%;
-        font-family: "Fredoka One";
-        font-weight: 300;
-        margin: 0 0 25px;
+        font-size: 39px;
+        line-height: 27px;
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 27px;
+
+        span {
+            font-family: "Averta-SemiBold";
+        }
     }
 }
 
@@ -525,6 +523,18 @@ a:hover {
         font-family: "Fredoka One";
         font-weight: 300;
     }
+}
+
+.bg-grey {
+    background-color: $clr_ash;
+}
+
+.bg-grad {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(244, 245, 248, 1) 35%, rgba(240, 241, 250, 1) 100%);
+}
+
+.bg-grad-v2 {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(244, 245, 248, 1) 35%, rgba(240, 241, 250, 1) 100%);
 }
 
 /*-------------------------------
@@ -575,7 +585,7 @@ a:hover {
                             padding: 8px 20px;
                             margin: 0 4px;
                             border-radius: 5px;
-                            transition:0.3s;
+                            transition: 0.3s;
 
                             &.active,
                             &:hover {
@@ -878,4 +888,206 @@ a:hover {
         color: #fff;
         margin: 0;
     }
+}
+
+
+/*--------------------------------
+        Hero CSS
+--------------------------------*/
+.hero-wrap {
+    padding: 20px 0;
+}
+
+.hero-content img {
+    margin: 0 0 25px;
+}
+
+.hero-content h1 {
+    font-size: 30px;
+    position: relative;
+    padding: 0 0 20px;
+}
+
+.hero-content h1:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: $clr_blue;
+    width: 80px;
+    height: 2px;
+}
+
+.working-hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 15px;
+    padding: 20px;
+}
+
+.working-hours-left p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.working-hours-left p span {
+    display: block;
+    opacity: 0.8;
+}
+
+.working-hours-right h6 {
+    font-size: 19px;
+    line-height: 21px;
+    color: $clr_blue;
+    margin: 0;
+}
+
+.step-wrap {
+    max-width: 50%;
+
+}
+
+.step-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.step-title p {
+    margin: 0;
+    font-family: "Averta-SemiBold";
+    font-weight: 300;
+}
+
+.step-title span {
+    color: $clr_blue;
+    font-size: 20px;
+}
+
+p.step-info {
+    font-size: 14px;
+    line-height: 18px;
+    color: #7E8299;
+}
+
+p.step-info span {
+    font-family: "Averta-semibold"
+}
+
+.step-bar {
+    width: 100%;
+    height: 6px;
+    display: block;
+    background: #DDDFEF;
+    margin: 10px 0;
+    border-radius: 50px;
+    position: relative;
+}
+
+.step-bar:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+    width: 70%;
+    height: 6px;
+    border-radius: 50px;
+}
+
+.mission-slider-item {
+    border: 1px solid #DCDEEF;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-slider-item img {
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.mission-item-title h4 {
+    font-size: 16px;
+    line-height: 21px;
+    color: $clr_blue;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.mission-item-title h5 {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+}
+
+.mission-slider-item h6 {
+    font-size: 14px;
+    line-height: 19px;
+    color: #7E8299;
+    margin:0 0 30px;
+}
+
+.mission-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #F0F1FA;
+    border-bottom: 1px solid #F0F1FA;
+    padding: 12px 0;
+}
+.mission-item-info:nth-child(1){
+    border-bottom:none;
+}
+.mission-item-info-left p {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: "Averta-SemiBold";
+    margin: 0;
+}
+
+.filter-btn a {
+    font-size: 24px;
+    line-height: 27px;
+    font-family: "Averta-SemiBold";
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(248, 248, 253, 1) 0%, rgba(243, 244, 251, 1) 35%, rgba(240, 241, 250, 1) 100%);
+    padding: 5px 50px 5px 10px;
+
+}
+
+.mission-item-info-right p {
+    margin: 0;
+    color: $clr_grey;
+}
+
+.mission-item-info-right span {
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    background: #1AC583;
+    display: inline-block;
+    line-height: 1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Averta-SemiBold";
+}
+
+.mission-item-info:last-child {
+    margin: 0 0 20px;
+}
+
+.mission-action-btn {
+    margin: 20px 0 0;
 }

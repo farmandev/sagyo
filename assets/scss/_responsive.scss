@@ -1,3 +1,33 @@
+// Responsive Variables
+$xl_1: 'only screen and (min-width: 1920px)';
+$xl_2: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$xl_3: 'only screen and (min-width: 1440px) and (max-width: 1599px)';
+$xl_4: 'only screen and (min-width: 1280px) and (max-width: 1359px)';
+$xl_5: 'only screen and (min-width: 1400px)';
+$xl_6: 'only screen and (min-width: 1200px)';
+$laptop: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
+$lg_1 : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$lg_2 : 'only screen and (min-width: 992px)';
+$lg_3 : 'only screen and (min-width: 1200px) ';
+$md_1:'only screen and (max-width:991px)';
+$md_2:'only screen and (min-width: 768px) and (max-width: 991px)';
+$md_3:'only screen and (min-width:768px)';
+$sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
+
+
+@media #{$xl_5} {
+    .mission-slider-wrap {
+        padding-left: calc((100% - 1320px) / 2 + 15px)!important;
+
+    }
+}
+
+@media #{$xl_6} {
+    .mission-slider-wrap {
+        padding-left: calc((100% - 1140px) / 2 + 15px);
+    }
+}
+
 @media #{$xl_1} {
     .hero-slide-img {
         height: 750px;
@@ -57,6 +87,7 @@
     .content-wrapper .content-left .content-text .list-details-tab li a {
         font-size: 13px;
     }
+
     .popular-wrap .product-item .product-info p {
         font-size: 13px;
     }
