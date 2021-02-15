@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="381" height="380" viewBox="0 0 381 380">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="imageMask" width="381" height="380" transform="translate(374 3620)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7500f4"/>
+      <stop offset="0.127" stop-color="#473af8"/>
+      <stop offset="0.335" stop-color="#0098ff"/>
+      <stop offset="0.478" stop-color="#00bae9"/>
+      <stop offset="0.639" stop-color="#00dad5"/>
+      <stop offset="0.775" stop-color="#00edc9"/>
+      <stop offset="0.868" stop-color="#00f5c5"/>
+    </linearGradient>
+  </defs>
+  <g id="CHECK_copie" data-name="CHECK  copie" transform="translate(-374 -3620)" opacity="0.702" clip-path="url(#clip-path)" style="mix-blend-mode: multiply;isolation: isolate">
+    <g id="CHECK_copie-2" data-name="CHECK  copie">
+      <g id="CHECK_copie-3" data-name="CHECK  copie" transform="translate(-18384.039 -3689.737)">
+        <path id="Path_977" data-name="Path 977" d="M18936.211,7664.208,18762.32,7501.3a3.871,3.871,0,0,1,.309-6.009c12.773-9.15,56.746-35.9,103.539-9.334,17.881,10.143,68.932,39.322,68.932,39.322s112.854-122.082,198.67-194.276c52.289-44.008,162.047-123.405,290.326-136.23,7.7-.754,11.08,9.757,4.293,13.486-40.807,22.381-118.619,72.1-211.877,166.4-140.4,141.927-251.865,265.957-272.75,289.366A5.2,5.2,0,0,1,18936.211,7664.208Z" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="Color_Overlay" data-name="Color Overlay" d="M552.171,3974.471l-173.89-162.91a3.871,3.871,0,0,1,.308-6.009c12.774-9.15,56.746-35.9,103.54-9.334,17.881,10.142,68.932,39.322,68.932,39.322s112.854-122.082,198.67-194.276c52.288-44.008,162.046-123.406,290.326-136.231,7.7-.753,11.08,9.757,4.293,13.487-40.807,22.381-118.62,72.1-211.878,166.4-140.4,141.927-251.865,265.957-272.749,289.366a5.05,5.05,0,0,1-3.8,1.719A5.485,5.485,0,0,1,552.171,3974.471Z" fill="#f0f1fa"/>
+    </g>
+  </g>
+</svg>

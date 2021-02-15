@@ -43,21 +43,18 @@
   
     $('.mission-slider-one').slick({
         slidesToShow: 4,
+        slidesToScroll: 1,
         dots: true,
         infinite: true,
         arrows: false,
         speed: 300,
+        centerMode: false,
         // slidesToShow: 1,
         // slidesToScroll: 1,
         responsive: [{
-            breakpoint: 767,
+            breakpoint: 1439,
             settings: {
-                centerMode: true,
-                slidesToShow: 1,
-                dots: true,
-                arrows: true,
-                swipe: true,
-                swipeToSlide: true,
+                slidesToShow: 3,
             }
         }]
     });

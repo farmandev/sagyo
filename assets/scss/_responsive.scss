@@ -8,12 +8,14 @@ $xl_6: 'only screen and (min-width: 1200px)';
 $laptop: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
 $lg_1 : 'only screen and (min-width: 992px) and (max-width: 1199px)';
 $lg_2 : 'only screen and (min-width: 992px)';
-$lg_3 : 'only screen and (min-width: 1200px) ';
+$lg_3 : 'only screen and (min-width: 1200px)';
 $md_1:'only screen and (max-width:991px)';
 $md_2:'only screen and (min-width: 768px) and (max-width: 991px)';
 $md_3:'only screen and (min-width:768px)';
 $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 
+
+@media #{$xl_1} {}
 
 @media #{$xl_4} {
     .client-option .client-logo {
@@ -21,21 +23,34 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
     }
 
     .header-notification {
-        
+
         padding-right: 14px;
+    }
+
+    .header-notification .notifi-icon {
+        margin-left: 16px;
     }
 }
 
 @media #{$xl_5} {
     .mission-slider-wrap {
-        padding-left: calc((100% - 1320px) / 2 + 15px) !important;
+        margin-left: calc((100% - 1320px) / 2 + 15px) !important;
 
+    }
+
+    .filter-btn-wrap,
+    .create-mission-wrap {
+        max-width: 1320px;
     }
 }
 
 @media #{$xl_6} {
     .mission-slider-wrap {
-        padding-left: calc((100% - 1140px) / 2 + 15px);
+        margin-left: calc((100% - 1140px) / 2 + 15px);
+    }
+    .filter-btn-wrap,
+    .create-mission-wrap {
+        max-width: 1140px;
     }
 }
 
@@ -78,6 +93,11 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
     }
 }
 
+@media #{$lg_1} {
+    .filter-btn-wrap {
+        max-width: 960px;
+    }
+}
 @media #{$laptop} {
     .hero-slide-img {
         height: 650px;

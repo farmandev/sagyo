@@ -366,13 +366,12 @@ a:hover {
   position: relative;
   padding: 2px;
   border-radius: 8px;
-  background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+  background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
   border: none;
   transition: 0.3s;
 }
 .btn.v3 span {
   display: block;
-  background-color: #fff;
   padding: 10px 21px 10px;
   font-size: 16px;
   line-height: 21px;
@@ -396,18 +395,17 @@ a:hover {
   position: relative;
   padding: 2px;
   border-radius: 8px;
-  background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+  background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
   transition: 0.3s;
 }
 .btn.v4 span {
   display: block;
-  background-color: #fff;
   padding: 10px 21px 10px;
   font-size: 16px;
   line-height: 21px;
   font-family: "Averta-SemiBold";
   color: #3B4CF9;
-  background: #F0F1FA;
+  background: #FFF;
   border-radius: 5px;
 }
 .btn.v5 {
@@ -461,7 +459,7 @@ a:hover {
 }
 
 .section-title {
-  margin: 0 0 40px;
+  margin: 0 0 50px;
   padding: 60px 0 0;
   text-align: center;
 }
@@ -624,6 +622,7 @@ a:hover {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
+  z-index: 9;
 }
 .header-notification .notifi-icon .notif-list.open {
   visibility: visible;
@@ -931,15 +930,28 @@ p.step-info span {
 
 .mission-slider-wrap {
   margin: 30px 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.mission-slider-wrap:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.160084102) 0%, rgba(255, 255, 255, 0.4205883037) 35%, rgba(240, 241, 250, 0.6894958667) 100%);
+  width: 25%;
+  height: 100%;
 }
 
 .mission-slider-item {
   border: 1px solid #DCDEEF;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
-  padding: 30px 20px;
-  margin: 0 10px 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px 18px;
+  margin: 5px 10px 25px;
+  box-shadow: 0 10px 21px -3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .mission-slider-item img {
@@ -989,12 +1001,98 @@ p.step-info span {
   margin: 0;
 }
 
+.create-mission-wrap {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5%;
+}
+
+.create-mission-box-wrap {
+  position: relative;
+  display: block;
+  background-clip: padding-box;
+  position: relative;
+  padding: 2px;
+  border-radius: 8px;
+  background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
+  border: none;
+  transition: 0.3s;
+}
+
+.create-mission-box {
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9;
+  position: relative;
+}
+
+.create-mission-box a.btn.v1 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 35px 12px;
+  font-family: "Averta-SemiBold";
+}
+
+.create-mission-box-wrap {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 420px;
+}
+
+.create-mission-box-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.create-mission-left {
+  width: 45%;
+}
+
+.create-mission-right {
+  width: 50%;
+}
+
+.create-mission-box h4 {
+  font-size: 27px;
+  line-height: 32px;
+  font-family: "Averta-Regular";
+  margin: 0 0 32px;
+}
+
+.create-mission-box h4 span {
+  font-family: "Averta-SemiBold";
+}
+
+.filter-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 15px;
+}
+
 .filter-btn a {
   font-size: 24px;
   line-height: 27px;
   font-family: "Averta-SemiBold";
   display: inline-block;
-  background: linear-gradient(90deg, #f8f8fd 0%, #f3f4fb 35%, #f0f1fa 100%);
+  background: linear-gradient(90deg, #f7f8fc 0%, #fdfdfe 35%, white 100%);
   padding: 5px 50px 5px 10px;
 }
 
@@ -1025,19 +1123,83 @@ p.step-info span {
   margin: 20px 0 0;
 }
 
+.create-mission-agent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #F0F1FA;
+  border-radius: 10px;
+  padding: 20px 35px;
+}
+
+.mission-agent-contact {
+  margin-left: 30px;
+}
+
+.mission-agent-contact {
+  width: 65%;
+}
+
+.mission-agent-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.mission-agent-contact h5 {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  font-family: "Averta-SemiBold";
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.mission-agent-contact a {
+  display: block;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px;
+}
+
+.mission-agent-contact a i {
+  color: #3B4CF9;
+  margin-right: 10px;
+}
+
+.create-mission-info h3 {
+  font-size: 27px;
+  line-height: 32px;
+  font-family: "Averta-SemiBold";
+}
+
+.create-mission-info p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.create-mission-info p span {
+  font-family: "Averta-Semibold";
+}
+
 /*------------------------------
        Cta Section CSS
 ---------------------------------*/
 .cta-wrap {
   background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
   color: #fff;
-  position: relative;
-  padding: 40px 0;
 }
 
 .cta-wrap .container {
   position: relative;
   z-index: 9;
+}
+
+.cta-text {
+  position: relative;
 }
 
 .shape-one {
@@ -1058,8 +1220,9 @@ p.step-info span {
 }
 
 .support-info {
-  background: #358AFF;
+  background: linear-gradient(90deg, #427fff 0%, #3190f6 35%, #28a5ff 100%);
   text-align: center;
+  padding: 46px 0;
 }
 
 .support-info img {
@@ -1204,15 +1367,29 @@ p.step-info span {
   .header-notification {
     padding-right: 14px;
   }
+
+  .header-notification .notifi-icon {
+    margin-left: 16px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .mission-slider-wrap {
-    padding-left: calc((100% - 1320px) / 2 + 15px) !important;
+    margin-left: calc((100% - 1320px) / 2 + 15px) !important;
+  }
+
+  .filter-btn-wrap,
+.create-mission-wrap {
+    max-width: 1320px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .mission-slider-wrap {
-    padding-left: calc((100% - 1140px) / 2 + 15px);
+    margin-left: calc((100% - 1140px) / 2 + 15px);
+  }
+
+  .filter-btn-wrap,
+.create-mission-wrap {
+    max-width: 1140px;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -1248,6 +1425,11 @@ p.step-info span {
 
   .popular-wrap .product-item .product-info p {
     font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .filter-btn-wrap {
+    max-width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1439px) {
