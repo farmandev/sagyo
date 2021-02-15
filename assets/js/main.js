@@ -28,6 +28,9 @@
         $('.body_overlay').toggleClass('open');
         $(this).toggleClass('open');
     });
+    $('.invite-popup a.btn.v1').on('click', function() {
+        $('.home').addClass('open');
+    });
     // $('.body_overlay').on('click', function() {
     //     if($('.client-menu').hasClass('open') && $('.notif-list').hasClass('open')){
     //         $('.client-menu').removeClass('open');

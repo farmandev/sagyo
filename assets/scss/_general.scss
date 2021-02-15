@@ -431,24 +431,84 @@ a:hover {
     }
 
     &.v3 {
-        font-size: 16px;
-        line-height: 21px;
-        font-family: "Averta-SemiBold";
-        color: $clr_blue;
-        background: transparent;
+
         display: block;
         width: 100%;
-        padding: 8px 21px 10px;
-        border: 1px solid $clr_blue;
-        border-radius: 5px;
-        box-shadow: none;
+        background-clip: padding-box;
+        position: relative;
+        padding: 2px;
+        border-radius: 8px;
+        background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+        border: none;
         transition: 0.3s;
 
-        &:hover {
-            color: #00BBB4;
-            background: $clr_white;
-            border-color: #00BBB4;
+        span {
+            display: block;
+            background-color: #fff;
+            padding: 10px 21px 10px;
+            font-size: 16px;
+            line-height: 21px;
+            font-family: "Averta-SemiBold";
+            color: $clr_blue;
+            background: #F0F1FA;
+            border-radius: 5px;
+            transition: 0.3s;
+
         }
+
+        &:hover {
+            background-image: none;
+
+            span {
+                background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+                color: #fff;
+            }
+        }
+    }
+
+    &.v4 {
+
+        display: block;
+        width: 100%;
+        background-clip: padding-box;
+        position: relative;
+        padding: 2px;
+        border-radius: 8px;
+        background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+        transition: 0.3s;
+
+        span {
+            display: block;
+            background-color: #fff;
+            padding: 10px 21px 10px;
+            font-size: 16px;
+            line-height: 21px;
+            font-family: "Averta-SemiBold";
+            color: $clr_blue;
+            background: #F0F1FA;
+            border-radius: 5px;
+
+        }
+
+        &:hover {}
+    }
+
+    &.v5 {
+        font-size: 16px;
+        line-height: 21px;
+        color: $clr_blue;
+        background: #fff;
+        display: inline-block;
+        padding: 8px 21px 10px;
+        border: none;
+        border-radius: 7px;
+        box-shadow: none;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        color: $clr_blue;
+        background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
     }
 
     :focus {
@@ -530,7 +590,7 @@ a:hover {
 }
 
 .bg-grad {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(244, 245, 248, 1) 35%, rgba(240, 241, 250, 1) 100%);
+    background: linear-gradient(90deg, white 0%, #f4f5f8 65%, #f0f1fa00 100%);
 }
 
 .bg-grad-v2 {
@@ -546,10 +606,16 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 0 41px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99;
 
-    .header-left,
-    .header-right {
-        width: 47%;
+    .header-left {
+        width: 49%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -561,6 +627,7 @@ a:hover {
 
         .logo {
             width: 20%;
+            margin-right: 25px;
         }
 
         .header-menu {
@@ -578,12 +645,13 @@ a:hover {
                             text-transform: capitalize;
                             position: relative;
                             display: block;
+                            font-size: 14px;
                             font-weight: 500;
                             text-align: center;
                             transition: 0.4s;
                             color: $clr_grey;
                             padding: 8px 20px;
-                            margin: 0 4px;
+                            margin: 0 2px;
                             border-radius: 5px;
                             transition: 0.3s;
 
@@ -599,11 +667,20 @@ a:hover {
         }
     }
 
+
     .header-left,
     .header-notification,
     .client-option {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+    .header-right {
+        width: 49%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
 }
@@ -623,7 +700,7 @@ a:hover {
 
     &::before {
         position: absolute;
-        top: -2px;
+        top: -1px;
         left: 0;
         content: "";
         background: #F0F1FA;
@@ -640,10 +717,11 @@ a:hover {
 
 .header-notification {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
     width: 35%;
+    padding-right: 30px;
 
     .notifi-icon {
         margin-left: 30px;
@@ -895,15 +973,27 @@ a:hover {
         Hero CSS
 --------------------------------*/
 .hero-wrap {
-    padding: 20px 0;
+    padding: 30px 0;
+    margin: 82px 0 0;
+    position: relative;
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+// .shape-two{
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     max-width: 50%;
+//     z-index: 0;
+// }
 .hero-content img {
     margin: 0 0 25px;
 }
 
 .hero-content h1 {
-    font-size: 30px;
+    font-size: 28px;
     position: relative;
     padding: 0 0 20px;
 }
@@ -913,7 +1003,8 @@ a:hover {
     bottom: 0;
     left: 0;
     content: "";
-    background: $clr_blue;
+    background: linear-gradient(90deg, rgb(59, 76, 249) 0%, rgba(59, 76, 249, 0.6446779395351891) 42%, rgba(240, 241, 250, 0.29173676306460083) 100%);
+
     width: 80px;
     height: 2px;
 }
@@ -925,6 +1016,8 @@ a:hover {
     flex-wrap: wrap;
     margin: 0 0 15px;
     padding: 20px;
+    z-index: 9;
+    position: relative;
 }
 
 .working-hours-left p {
@@ -966,6 +1059,12 @@ a:hover {
     font-weight: 300;
 }
 
+.step-title p img {
+    position: relative;
+    top: 11px;
+    right: 0;
+}
+
 .step-title span {
     color: $clr_blue;
     font-size: 20px;
@@ -997,9 +1096,13 @@ p.step-info span {
     left: 0;
     content: "";
     background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
-    width: 70%;
+    width: 25%;
     height: 6px;
     border-radius: 50px;
+}
+
+.mission-slider-wrap {
+    margin: 30px 0;
 }
 
 .mission-slider-item {
@@ -1007,7 +1110,7 @@ p.step-info span {
     border-radius: 5px;
     text-align: center;
     padding: 30px 20px;
-    margin: 0 10px;
+    margin: 0 10px 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1034,7 +1137,7 @@ p.step-info span {
     font-size: 14px;
     line-height: 19px;
     color: #7E8299;
-    margin:0 0 30px;
+    margin: 0 0 30px;
 }
 
 .mission-item-info {
@@ -1046,11 +1149,13 @@ p.step-info span {
     border-bottom: 1px solid #F0F1FA;
     padding: 12px 0;
 }
-.mission-item-info:nth-child(1){
-    border-bottom:none;
+
+.mission-item-info:nth-child(1) {
+    border-bottom: none;
 }
+
 .mission-item-info-left p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 21px;
     font-family: "Averta-SemiBold";
     margin: 0;
@@ -1069,6 +1174,7 @@ p.step-info span {
 .mission-item-info-right p {
     margin: 0;
     color: $clr_grey;
+    font-size: 14px;
 }
 
 .mission-item-info-right span {
@@ -1090,4 +1196,180 @@ p.step-info span {
 
 .mission-action-btn {
     margin: 20px 0 0;
+}
+
+
+/*------------------------------
+       Cta Section CSS
+---------------------------------*/
+
+.cta-wrap {
+    background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+    color: #fff;
+    position: relative;
+    padding: 40px 0;
+}
+
+.cta-wrap .container {
+    position: relative;
+    z-index: 9;
+}
+
+.shape-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 40%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.cta-text h3 {
+    font-size: 28px;
+    line-height: 34px;
+    font-family: "Averta-Regular";
+    font-weight: 600;
+    margin: 0 0 30px;
+}
+
+.support-info {
+    background: #358AFF;
+    text-align: center;
+}
+
+.support-info img {
+    margin: 0 auto 30px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.support-info a {
+    color: #fff;
+    display: block;
+}
+
+.support-info h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: "Averta-SemiBold";
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.user-mission-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.user-mission-item {
+    width: 32%;
+    background: #F0F1FA;
+    margin: 0 0.5% 15px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.user-mission-item.v1 {
+    text-align: center;
+    background-clip: padding-box;
+    position: relative;
+    padding: 2px;
+    border-radius: 12px;
+    background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+
+    .user-mission-invite {
+        display: block;
+        background-color: #fff;
+        padding: 10px 21px 10px;
+        background: #fff;
+        border-radius: 10px;
+
+    }
+}
+
+.close-item {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.user-stat h5 {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.user-stat p {
+    opacity: 0.8;
+}
+
+.user-stat h6 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.user-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.user-stat span {
+    color: $clr_blue;
+    font-size: 20px;
+    font-family: "Averta-Bold";
+    display: block;
+}
+
+.invite-popup {
+    text-align: center;
+}
+
+.invite-popup .user-mission-item.v1 {
+    margin: 30px auto 0;
+    box-shadow: 6px 9px 19px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-mission-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(240, 241, 250, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.home.open .user-mission-hover {
+    display: none;
+}
+
+.pop-back {
+    filter: blur(10px);
+}
+
+.home.open .pop-back {
+    filter: blur(0);
+}
+
+.home.open .step-bar:before {
+    width: 75%;
+}
+
+.cta-wrap {
+    display: none;
+}
+
+.home.open .cta-wrap {
+    display: block;
 }

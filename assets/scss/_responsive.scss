@@ -2,7 +2,7 @@
 $xl_1: 'only screen and (min-width: 1920px)';
 $xl_2: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
 $xl_3: 'only screen and (min-width: 1440px) and (max-width: 1599px)';
-$xl_4: 'only screen and (min-width: 1280px) and (max-width: 1359px)';
+$xl_4: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
 $xl_5: 'only screen and (min-width: 1400px)';
 $xl_6: 'only screen and (min-width: 1200px)';
 $laptop: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
@@ -15,9 +15,20 @@ $md_3:'only screen and (min-width:768px)';
 $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 
 
+@media #{$xl_4} {
+    .client-option .client-logo {
+        margin-right: 20px;
+    }
+
+    .header-notification {
+        
+        padding-right: 14px;
+    }
+}
+
 @media #{$xl_5} {
     .mission-slider-wrap {
-        padding-left: calc((100% - 1320px) / 2 + 15px)!important;
+        padding-left: calc((100% - 1320px) / 2 + 15px) !important;
 
     }
 }
