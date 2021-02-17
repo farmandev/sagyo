@@ -34,7 +34,8 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 }
 
 @media #{$xl_5} {
-    .mission-slider-wrap {
+    .mission-slider-wrap.v1,
+    .mission-slider-wrap.v2 {
         margin-left: calc((100% - 1320px) / 2 + 15px) !important;
 
     }

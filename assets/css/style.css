@@ -841,8 +841,7 @@ a:hover {
   position: relative;
   padding: 0 0 20px;
 }
-
-.hero-content h2:before {
+.hero-content h2::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -863,21 +862,18 @@ a:hover {
   position: relative;
   box-shadow: -12px 11px 16px -10px rgba(135, 136, 141, 0.15);
 }
-
-.working-hours-left p {
+.working-hours .working-hours-left p {
   font-size: 14px;
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
 }
-
-.working-hours-left p span {
+.working-hours .working-hours-left p span {
   display: block;
   opacity: 0.8;
 }
-
-.working-hours-right h6 {
+.working-hours .working-hours-right h6 {
   font-size: 19px;
   line-height: 21px;
   color: #3B4CF9;
@@ -894,19 +890,16 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .step-title p {
   margin: 0;
   font-family: "Averta-SemiBold";
   font-weight: 300;
 }
-
 .step-title p img {
   position: relative;
   top: 11px;
   right: 0;
 }
-
 .step-title span {
   color: #3B4CF9;
   font-size: 20px;
@@ -917,7 +910,6 @@ p.step-info {
   line-height: 18px;
   color: #7E8299;
 }
-
 p.step-info span {
   font-family: "Averta-semibold";
 }
@@ -931,7 +923,6 @@ p.step-info span {
   border-radius: 50px;
   position: relative;
 }
-
 .step-bar:before {
   position: absolute;
   top: 0;
@@ -949,7 +940,8 @@ p.step-info span {
   overflow-x: hidden;
 }
 
-.mission-slider-wrap:after {
+.mission-slider-wrap.v1:after,
+.mission-slider-wrap.v2:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1373,21 +1365,52 @@ p.step-info span {
   font-family: "Averta-Light";
 }
 
+.search-box {
+  margin: 35px 0 0;
+}
 .search-box label {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   font-family: "Averta-SemiBold";
   display: block;
+  margin: 0 0 10px;
 }
-.search-box label .form-group {
+.search-box .form-group {
   position: relative;
+  width: 390px;
 }
-.search-box label .form-group input {
+.search-box .form-group input {
   width: 100%;
   height: 52px;
   border-radius: 5px;
   border: 1px solid #DCDEEF;
+  font-size: 16px;
+  line-height: 33px;
+  padding: 10px 10px 10px 20px;
+  font-family: "Averta-Light";
+}
+.search-box .form-group button.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+  color: #fff;
+  padding: 10px 20px;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.mission-slider-wrap.v3 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.mission-slider-wrap.v3 .mission-slider-item {
+  width: 31%;
+  margin: 0 1% 25px;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -1405,7 +1428,8 @@ p.step-info span {
   }
 }
 @media only screen and (min-width: 1400px) {
-  .mission-slider-wrap {
+  .mission-slider-wrap.v1,
+.mission-slider-wrap.v2 {
     margin-left: calc((100% - 1320px) / 2 + 15px) !important;
   }
 
