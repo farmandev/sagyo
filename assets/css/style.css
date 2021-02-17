@@ -1008,6 +1008,19 @@ p.step-info span {
   margin: 0;
 }
 
+.pr-btn {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-family: "Averta-SemiBold";
+  margin: 0;
+  background-color: #1AC583;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+
 .create-mission-wrap {
   margin: 0 auto;
   display: flex;
