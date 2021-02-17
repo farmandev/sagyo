@@ -1015,7 +1015,7 @@ p.step-info span {
   font-family: "Averta-SemiBold";
   margin: 0;
   background-color: #1AC583;
-  display: block;
+  display: inline-block;
   padding: 3px 10px;
   border-radius: 3px;
   color: #fff;
@@ -1359,6 +1359,72 @@ p.step-info span {
   background-color: rgba(240, 241, 250, 0.6);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+.content-wrap {
+  margin: 82px 0 0;
+}
+
+.breadcrumb-hero {
+  padding: 25px 0;
+}
+
+.back-btn a {
+  font-size: 14px;
+  line-height: 21px;
+  background: #F0F1FA;
+  display: inline-block;
+  padding: 8px 18px;
+  color: #7E8299;
+  border-radius: 5px;
+}
+.back-btn a i {
+  color: #7E8299;
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.mission-slider-item.s1 {
+  border: none;
+  box-shadow: none;
+}
+.mission-slider-item.s1 .mission-item-title h4 {
+  font-size: 22px;
+  line-height: 21px;
+  color: #3B4CF9;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+.mission-slider-item.s1 .mission-item-title h5 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.mission-slider-item.s1 .mission-item-title h6 {
+  font-size: 16px;
+}
+.mission-slider-item.s1 .mission-item-title .pr-btn {
+  padding: 3px 20px;
+}
+
+.tab-area .nav.nav-tabs {
+  background: #F0F1FA;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: none;
+}
+
+.tab-area .nav.nav-tabs li a {
+  font-size: 20px;
+  line-height: 20px;
+  color: #707070;
+  margin: 0 26px;
+}
+
+.tab-area .nav.nav-tabs li a.active {
+  color: #3B4CF9;
 }
 
 /*--------------------------------
