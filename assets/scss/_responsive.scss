@@ -2,7 +2,7 @@
 $xl_1: 'only screen and (min-width: 1920px)';
 $xl_2: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
 $xl_3: 'only screen and (min-width: 1440px) and (max-width: 1599px)';
-$xl_4: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
+$xl_4: 'only screen and (min-width: 1200px) and (max-width: 1360px)';
 $xl_5: 'only screen and (min-width: 1400px)';
 $xl_6: 'only screen and (min-width: 1200px)';
 $laptop: 'only screen and (min-width: 1200px) and (max-width: 1439px)';
@@ -23,17 +23,32 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 }
 
 @media #{$xl_4} {
-    .client-option .client-logo {
-        margin-right: 20px;
+    .header-wrap .header-left .header-menu .main-menu ul li a {
+        font-size: 12px;
+        padding: 5px 7px 7px;
+        margin: 0 2px;
     }
 
+    .header-wrap .header-right .client-option .client-menu h6 {
+        font-size: 13px;
+    }
 
-    .header-notification .notifi-icon {
-        margin-left: 16px;
+    .header-wrap .header-right .header-notification .notifi-icon {
+        margin: 0 14px;
+    }
+
+    .header-wrap .header-right .client-option {
+        width: 60%;
+    }
+
+    .header-wrap .header-right .header-notification {
+        
+        width: 40%;
     }
 }
 
 @media #{$xl_5} {
+
     .mission-slider-wrap.v1,
     .mission-slider-wrap.v2 {
         margin-left: calc((100% - 1320px) / 2 + 15px) !important;
@@ -144,6 +159,10 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
         padding: 5px 7px 7px;
         margin: 0 2px;
     }
+
+    .header-wrap .header-right .client-option .client-menu h6 {
+        font-size: 13px;
+    }
 }
 
 @media #{$laptop} {
@@ -153,6 +172,15 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
 
     .header-wrap .header-right .header-notification .notifi-icon {
         margin: 0 20px;
+    }
+
+    .header-wrap .header-right .client-option .client-logo {
+        margin-right: 20px;
+    }
+
+
+    .header-notification .notifi-icon {
+        margin-left: 16px;
     }
 
     // .hero-slide-img {
@@ -210,7 +238,8 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
         z-index: 999;
         position: relative;
         cursor: pointer;
-        width: 30%;
+        width: 40px;
+        padding: 0 5px;
         text-align: right;
 
         span {
@@ -225,7 +254,7 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
     }
 
     .hamburger-menu.open span:nth-child(1) {
-        transform: rotate(-45deg) translate(-6px, 5px);
+        transform: rotate(-45deg) translate(-5px, 5px);
     }
 
 
@@ -244,8 +273,9 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
                 .main-menu {
                     ul {
                         width: 100%;
+                        height: 100vh;
                         position: absolute;
-                        top: 50px;
+                        top: 63px;
                         left: 0;
                         padding: 100px 0px;
                         background-color: #fff;
@@ -275,9 +305,24 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
                 }
             }
         }
+
+        .header-right {
+            padding-right: 15px;
+        }
     }
 
+    .header-wrap .header-left {
+        padding-left: 15px;
+        width: 40%;
 
+    }
+
+    .header-wrap .header-left,
+    .header-wrap .header-notification,
+    .header-wrap .client-option {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
     .header-wrap .header-right .client-option .client-menu::after,
     .header-wrap .header-right .client-option::before {
@@ -285,11 +330,44 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
     }
 
     .header-wrap .header-right .client-option {
+        width: auto;
         background: transparent;
+        padding: 0 15px;
     }
 
-    .header-wrap .header-right .client-option {
-        width: 30%;
+    .header-wrap .header-right .header-notification,
+    .header-wrap .header-left .logo {
+        width: auto;
+    }
+
+    .header-wrap .header-right .header-notification .notifi-icon {
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    .header-wrap .header-right .header-notification .notifi-icon .notif-list {
+        right: 0;
+        left: auto;
+    }
+
+    .header-wrap .header-right .header-notification .notifi-icon .notif-list::before {
+        right: 17px;
+        left: auto;
+
+    }
+
+    .header-wrap .header-right .client-option .client-menu.open ul {
+        right: -14px;
+        left: auto;
+    }
+
+    .header-wrap .header-right .client-option .client-menu ul::before {
+        right: 17px;
+        left: auto;
+    }
+
+    .header-wrap .header-right .client-option .client-menu i {
+        font-size: 20px;
     }
 
 

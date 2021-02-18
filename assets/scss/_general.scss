@@ -504,14 +504,40 @@ a:hover {
         border-radius: 7px;
         box-shadow: none;
         transition: 0.3s;
+
+        &:hover {
+            color: $clr_blue;
+            background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+        }
     }
 
-    &:hover {
-        color: $clr_blue;
-        background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+    &.v6 {
+
+        display: block;
+        width: 100%;
+        background-clip: padding-box;
+        position: relative;
+        padding: 2px;
+        border-radius: 8px;
+        background-image: linear-gradient(90deg, rgba(108, 4, 248, 1) 0%, rgba(28, 102, 255, 1) 35%, rgba(23, 194, 238, 1) 100%);
+        transition: 0.3s;
+
+        span {
+            display: block;
+            padding: 10px 21px 10px;
+            font-size: 16px;
+            line-height: 21px;
+            font-family: "Averta-SemiBold";
+            color: $clr_blue;
+            background: #FFF;
+            border-radius: 5px;
+
+        }
+
+        &:hover {}
     }
 
-    :focus {
+    &:focus {
         outline: none;
         border: none;
         box-shadow: none;
@@ -572,19 +598,34 @@ a:hover {
 }
 
 .content-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 0 10px;
+    text-align: center;
+    margin: 0 0 50px;
+
+    &.v2 {
+        text-align: left;
+        h3 {
+            margin: 0 0 5px;
+        }
+    }
 
     h3 {
-        font-size: 27px;
-        font-family: "Fredoka One";
-        font-weight: 300;
+        font-size: 39px;
+        line-height: 42px;
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 27px;
+
+        span {
+            font-family: "Averta-SemiBold";
+        }
     }
 }
-
+.text-blue{
+    color: $clr_blue!important;
+}
 .bg-grey {
     background-color: $clr_ash;
 }
@@ -624,6 +665,10 @@ a:hover {
 }
 
 .py-60 {
+    padding: 60px 0;
+}
+
+.section-padding {
     padding: 60px 0;
 }
 
@@ -1224,6 +1269,7 @@ p.step-info {
     font-family: "Averta-SemiBold";
     margin: 0;
 }
+
 .pr-btn {
     font-size: 14px;
     line-height: 21px;
@@ -1236,6 +1282,7 @@ p.step-info {
     border-radius: 3px;
     color: #fff;
 }
+
 .create-mission-wrap {
     margin: 0 auto;
     display: flex;
@@ -1441,140 +1488,158 @@ p.step-info {
 .cta-wrap {
     background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112728685224) 14%, rgba(58, 59, 255, 1) 50%, rgba(0, 211, 223, 1) 100%);
     color: #fff;
-}
 
-.cta-wrap .container {
-    position: relative;
-    z-index: 9;
-}
+    .container {
+        position: relative;
+        z-index: 9;
 
-.cta-text {
-    position: relative;
-}
+        .cta-text {
+            position: relative;
 
-.shape-one {
-    position: absolute;
-    bottom: -97px;
-    left: 0;
-    width: 80%;
-    z-index: -1;
-    opacity: 0.1;
-}
+            .shape-one {
+                position: absolute;
+                bottom: -97px;
+                left: 0;
+                width: 80%;
+                z-index: -1;
+                opacity: 0.1;
+            }
 
-.cta-text h3 {
-    font-size: 28px;
-    line-height: 34px;
-    font-family: "Averta-Regular";
-    font-weight: 600;
-    margin: 0 0 30px;
+            h3 {
+                font-size: 28px;
+                line-height: 34px;
+                font-family: "Averta-Regular";
+                font-weight: 600;
+                margin: 0 0 30px;
+            }
+
+        }
+    }
 }
 
 .support-info {
     background: linear-gradient(90deg, rgba(66, 127, 255, 1) 0%, rgba(49, 144, 246, 1) 35%, rgba(40, 165, 255, 1) 100%);
     text-align: center;
     padding: 46px 0;
-}
 
-.support-info img {
-    margin: 0 auto 30px;
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.support-info a {
-    color: #fff;
-    display: block;
-}
-
-.support-info h4 {
-    font-size: 16px;
-    line-height: 21px;
-    font-family: "Averta-SemiBold";
-    text-transform: uppercase;
-    margin: 0 0 6px;
-}
-
-.user-mission-wrap {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-.user-mission-item {
-    width: 32%;
-    background: #F0F1FA;
-    margin: 0 0.5% 15px;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.user-mission-item.v1 {
-    text-align: center;
-    background-clip: padding-box;
-    position: relative;
-    padding: 2px;
-    border-radius: 12px;
-    background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
-
-    .user-mission-invite {
+    img {
+        margin: 0 auto 30px;
         display: block;
-        background-color: #fff;
-        padding: 10px 21px 10px;
-        background: #fff;
-        border-radius: 10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    h4 {
+        font-size: 16px;
+        line-height: 21px;
+        font-family: "Averta-SemiBold";
+        text-transform: uppercase;
+        margin: 0 0 6px;
+    }
+
+    a {
+        color: #fff;
+        display: block;
+    }
+}
+
+.user-mission-area {
+    .user-mission-wrap {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+
+        .user-mission-item {
+            width: 32%;
+            background: #F0F1FA;
+            margin: 0 0.5% 15px;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+
+            &.v1 {
+                text-align: center;
+                background-clip: padding-box;
+                position: relative;
+                padding: 2px;
+                border-radius: 12px;
+                background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
+
+                .user-mission-invite {
+                    display: block;
+                    background-color: #fff;
+                    padding: 10px 21px 10px;
+                    background: #fff;
+                    border-radius: 10px;
+
+                }
+            }
+
+            .close-item {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .user-stat {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                h5 {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin: 0;
+                }
+
+                h6 {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+
+                p {
+                    opacity: 0.8;
+                }
+
+                span {
+                    color: $clr_blue;
+                    font-size: 20px;
+                    font-family: "Averta-Bold";
+                    display: block;
+                }
+            }
+
+        }
 
     }
 }
 
-.close-item {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.user-stat h5 {
-    font-size: 18px;
-    line-height: 22px;
-    margin: 0;
-}
-
-.user-stat p {
-    opacity: 0.8;
-}
-
-.user-stat h6 {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.user-stat {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 
-.user-stat span {
-    color: $clr_blue;
-    font-size: 20px;
-    font-family: "Averta-Bold";
-    display: block;
-}
+
+
+
+
+
+
+
+
+
+
 
 .invite-popup {
     text-align: center;
+
+    .user-mission-item.v1 {
+        margin: 30px auto 0;
+        box-shadow: 6px 9px 19px 3px rgba(0, 0, 0, 0.1);
+    }
 }
 
-.invite-popup .user-mission-item.v1 {
-    margin: 30px auto 0;
-    box-shadow: 6px 9px 19px 3px rgba(0, 0, 0, 0.1);
-}
 
 .user-mission-hover {
     position: absolute;
