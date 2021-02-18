@@ -25,19 +25,19 @@
 
     $('.notifi-icon').on('click', function() {
         $(this).toggleClass('open');
-        $('.body_overlay').toggleClass('open');
+        // $('.body_overlay').toggleClass('open');
     });
     $('.client-menu').on('click', function() {
-        $('.body_overlay').toggleClass('open');
+        // $('.body_overlay').toggleClass('open');
         $(this).toggleClass('open');
     });
-    $('.pop-btn').on('click', function() {
-        $('.home').addClass('open');
-        $('.create-mission-wrap').addClass('d-none');
-        $('.filter-btn-wrap').removeClass('d-none');
-        $('.filter-btn-wrap').addClass('d-flex');
-        $('.mission-slider-wrap.v1').removeClass('d-none');
-    });
+    // $('.pop-btn').on('click', function() {
+    //     $('.home').addClass('open');
+    //     // $('.create-mission-wrap').addClass('d-none');
+    //     // $('.filter-btn-wrap').removeClass('d-none');
+    //     // $('.filter-btn-wrap').addClass('d-flex');
+    //     // $('.mission-slider-wrap.v1').removeClass('d-none');
+    // });
     //popup close
     // $('.pop-btn').on('click', function() {
     //     if ($('.mission-slider-wrap.v1').hasClass('d-none')) {

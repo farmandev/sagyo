@@ -72,7 +72,7 @@
 
         p {
             margin: 0;
-            font-family: "$primary_font_SB";
+            font-family: $primary_font_SB;
             font-weight: 300;
 
             img {
@@ -96,7 +96,7 @@ p.step-info {
     color: #7E8299;
 
     span {
-        font-family: "Averta-semibold"
+        font-family: $primary_font_SB;
     }
 }
 
@@ -148,7 +148,7 @@ p.step-info {
     padding: 0 20px 18px;
     margin: 5px 10px 25px;
     box-shadow: 0 10px 21px -3px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: $clr_white;
 
     img {
         display: block;
@@ -163,6 +163,7 @@ p.step-info {
         line-height: 21px;
         color: $clr_blue;
         margin: 0;
+        font-family: $primary_font_SB;
         text-transform: uppercase;
     }
 
@@ -208,13 +209,13 @@ p.step-info {
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
-    font-family: "$primary_font_SB";
+    font-family: $primary_font_SB;
     margin: 0;
     background-color: #1AC583;
     display: inline-block;
     padding: 3px 10px;
     border-radius: 5px;
-    color: #fff;
+    color: $clr_white;
 }
 
 .create-mission-wrap {
@@ -253,7 +254,7 @@ p.step-info {
 
             .create-mission-box {
                 display: block;
-                background: #fff;
+                background: $clr_white;
                 border-radius: 10px;
                 transition: 0.3s;
                 min-height: 420px;
@@ -267,7 +268,7 @@ p.step-info {
                     max-width: 100%;
                     margin: 0 auto;
                     padding: 10px 35px 12px;
-                    font-family: "$primary_font_SB";
+                    font-family: $primary_font_SB;
                 }
 
             }
@@ -283,11 +284,11 @@ p.step-info {
     h4 {
         font-size: 27px;
         line-height: 32px;
-        font-family: "Averta-Regular";
+        font-family: $primary_font_RG;
         margin: 0 0 32px;
 
         span {
-            font-family: "$primary_font_SB";
+            font-family: $primary_font_SB;
         }
     }
 }
@@ -306,7 +307,7 @@ p.step-info {
         a {
             font-size: 24px;
             line-height: 27px;
-            font-family: "$primary_font_SB";
+            font-family: $primary_font_SB;
             display: inline-block;
             background: linear-gradient(90deg, rgba(247, 248, 252, 1) 0%, rgba(253, 253, 254, 1) 35%, rgba(255, 255, 255, 1) 100%);
             border-radius: 3px;
@@ -319,7 +320,7 @@ p.step-info {
 
 .filter-btn.v2 a {
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(247, 248, 252, 1) 35%, rgba(240, 241, 250, 1) 100%);
-
+    padding: 10px;
 }
 
 .mission-item-info-right {
@@ -332,14 +333,14 @@ p.step-info {
     span {
         font-size: 14px;
         line-height: 21px;
-        color: #fff;
+        color: $clr_white;
         background: #1AC583;
         display: inline-block;
         line-height: 1;
         padding: 6px 10px;
         border-radius: 4px;
         text-transform: uppercase;
-        font-family: "$primary_font_SB";
+        font-family: $primary_font_SB;
     }
 }
 
@@ -375,7 +376,7 @@ p.step-info {
         line-height: 22px;
         margin: 0 0 5px;
         text-transform: uppercase;
-        font-family: "$primary_font_SB";
+        font-family: $primary_font_SB;
         font-weight: 500;
         letter-spacing: 2px;
     }
@@ -407,7 +408,7 @@ p.step-info {
     h3 {
         font-size: 27px;
         line-height: 32px;
-        font-family: "$primary_font_SB";
+        font-family:$primary_font_SB;
     }
 
     p {
@@ -415,7 +416,7 @@ p.step-info {
         line-height: 26px;
 
         span {
-            font-family: "Averta-Semibold";
+            font-family:$primary_font_SB;
         }
     }
 
@@ -427,7 +428,7 @@ p.step-info {
 
 .cta-wrap {
     background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112728685224) 14%, rgba(58, 59, 255, 1) 50%, rgba(0, 211, 223, 1) 100%);
-    color: #fff;
+    color: $clr_white;
 
     .container {
         position: relative;
@@ -448,7 +449,7 @@ p.step-info {
             h3 {
                 font-size: 28px;
                 line-height: 34px;
-                font-family: "Averta-Regular";
+                font-family: $primary_font_RG;
                 font-weight: 600;
                 margin: 0 0 30px;
             }
@@ -473,13 +474,13 @@ p.step-info {
     h4 {
         font-size: 16px;
         line-height: 21px;
-        font-family: "$primary_font_SB";
+        font-family: $primary_font_SB;
         text-transform: uppercase;
         margin: 0 0 6px;
     }
 
     a {
-        color: #fff;
+        color: $clr_white;
         display: block;
     }
 }
@@ -511,10 +512,15 @@ p.step-info {
 
                 .user-mission-invite {
                     display: block;
-                    background-color: #fff;
+                    background-color: $clr_white;
                     padding: 10px 21px 10px;
-                    background: #fff;
+                    background: $clr_white;
                     border-radius: 10px;
+                    h4{
+                        font-size: 24px;
+                        line-height: 38px;
+
+                    }
 
                 }
             }
@@ -550,7 +556,7 @@ p.step-info {
                 span {
                     color: $clr_blue;
                     font-size: 20px;
-                    font-family: "$primary_font_BL";
+                    font-family:$primary_font_Bl;
                     display: block;
                 }
             }
@@ -583,7 +589,7 @@ p.step-info {
                 padding: 10px 21px 10px;
                 font-size: 16px;
                 line-height: 21px;
-                background: #fff;
+                background: $clr_white;
                 border-radius: 5px;
                 transition: 0.3s;
                 width: auto;

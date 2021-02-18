@@ -1,3 +1,4 @@
+
 /*---------------------------------
         Variable 
 -----------------------------------*/
@@ -9,11 +10,10 @@ $primary_font_LG: 'Averta-Light';
 
 
 $clr_black: #333332;
-$clr_blue: #3B4CF9;
+$clr_blue: #3B4CF9; 
 $clr_white: #fff;
 $clr_grey: #7E8299;
 $clr_ash:#F0F1FA;
-
 
 @font-face {
     font-family: 'Averta-Light';
@@ -87,7 +87,7 @@ h5,
 h6 {
     margin-bottom: 10px;
     line-height: 1.6;
-    font-family: $primary_font_BL;
+    font-family: $primary_font_Bl;
 }
 
 body {
@@ -904,11 +904,12 @@ a:hover {
 
             .client-menu {
                 position: relative;
+                cursor: pointer;
 
                 h6 {
                     font-size: 16px;
                     line-height: 18px;
-                    font-family: $primary_font_BL;
+                    font-family: $primary_font_Bl;
                     display: block;
                     position: relative;
                     padding-right: 10px;
