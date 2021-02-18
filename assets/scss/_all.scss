@@ -79,6 +79,7 @@
 
 .tab-area .nav.nav-tabs li a.active {
     color: #3B4CF9;
+    font-family: "Averta-Semibold";
 }
 
 /*Delivery*/
@@ -416,7 +417,8 @@
 
         &.v2 {
             background-color: #F0F1FA;
-            h3{
+
+            h3 {
                 margin: 0 0 70px;
             }
         }
@@ -478,6 +480,236 @@
             padding: 3px 10px;
             border-radius: 6px;
             font-family: "Averta-SemiBold";
+        }
+    }
+}
+
+
+
+/*Message*/
+
+.msg-box-title h5 {
+    font-size: 20px;
+    line-height: 21px;
+    font-family: "Averta-Regular";
+}
+
+.msg-box-title {
+    text-align: center;
+    border-bottom: 1px solid #F0F1FA;
+    padding: 50px 0 30px;
+}
+
+.msg-box-title h6 {
+    color: $clr_blue;
+    font-size: 20px;
+    line-height: 21px;
+}
+
+.chat-item {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+
+
+    max-height: 50%;
+
+    .chat-img {
+        width: 60px;
+        margin-left: 15px;
+
+        img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+        }
+    }
+
+    .chat-name {
+        text-align: right;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Averta-SemiBold";
+        margin: 0 0 7px;
+
+        span {
+            font-family: "Averta-Regular";
+            margin-left: 20px;
+        }
+
+    }
+
+    .chat-msg {
+        padding: 15px 25px;
+        border-radius: 5px;
+
+        p {
+            color: #fff;
+            line-height: 20px;
+            margin: 0;
+
+            span {
+                margin: 0 2px;
+
+                img {
+                    max-width: 15px;
+                }
+            }
+        }
+    }
+
+    &.one {
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .chat-msg {
+            background: #472FFF;
+            border-top-right-radius: 0;
+
+            p {
+                color: $clr_white;
+
+                span {
+                    margin: 0 2px;
+
+                    img {
+                        max-width: 14px;
+                    }
+                }
+            }
+        }
+
+        .chat-name {
+            text-align: right;
+
+            span {
+                margin-left: 20px;
+            }
+
+        }
+    }
+
+    &.two {
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        .chat-name {
+            text-align: left;
+
+            span {
+                margin-left: 20px;
+            }
+
+        }
+
+        .chat-msg {
+            background: #F1F1FB;
+            border-top-left-radius: 0;
+
+            p {
+                color: $clr_black;
+            }
+        }
+    }
+
+}
+
+.chat-field {
+    .search-box {
+        margin: 20px 0 50px 0;
+
+        label {
+            span {
+                color: $clr_blue;
+            }
+        }
+
+        .form-group {
+            width: 100%;
+
+            input {
+                box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1);
+                height: 47px;
+            }
+
+            button {
+                font-family: "Averta-Semibold";
+                padding: 10px 30px !important;
+            }
+        }
+    }
+}
+
+
+/*--------Filter Page CSS---------*/
+
+.filter-area {
+    background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112729) 14%, #3a3bff 50%, #00d3df 100%);
+    padding: 60px 0;
+
+    .filter-item-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .filter-item {
+            width: 21%;
+
+            &:last-child {
+                width: 31%;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 33px;
+                margin: 0;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: "Averta-SemiBold";
+            }
+
+            .nice-select {
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                font-size: 14px;
+                line-height: 33px;
+                color: #000;
+                line-height: 41px;
+                padding: 0 18px;
+            }
+
+            .pickdate-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .pickdate {
+                    width: 48%;
+
+                    .input-group {
+                        input {
+                            height: 40px;
+                            border: none;
+                            background-color: $clr_white;
+                            font-size: 13px;
+                            padding: 0 4px 0 0;
+                        }
+
+                        span {
+                            position: absolute;
+                            top: 0;
+                            right: 8px;
+                            padding: 0 4px;
+                            cursor: pointer;
+                            color: #3B4CF9;
+                        }
+                    }
+                }
+            }
         }
     }
 }

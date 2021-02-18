@@ -107,80 +107,25 @@
         }, 1500);
     });
 
-    $('#arrow-next').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 90 }, 500, 'linear');
+    /* ----------------------------------------
+                  datepicker
+           ------------------------------------------- */
+    $("#datepicker-from-1, #datepicker-to-1").datepicker({
+        autoclose: true,
+        todayHighlight: true
     });
+    $('select').niceSelect();
 
 
 
-    // Smoot Scroll Effect
-    $('.main-menu li a').bind('click', function(event) {
-        var $anchor = $(this);
-        var headerH = '88';
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - headerH + "px"
-        }, 1200, 'easeInSine');
-        event.preventDefault();
-    });
 
 
-    // Smoot Scroll Effect
-    $('.ofcavas-menu ul li a').bind('click', function(event) {
-        var $anchor = $(this);
-        var headerH = '88';
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - headerH + "px"
-        }, 1200, 'easeInSine');
-        event.preventDefault();
-    });
 
 
-    $('.ofcavas-menu ul li a').on('click', function(e) {
-        e.preventDefault();
-        $('.ofcavas-menu').removeClass('current');
-    });
-
-    $('.ofcavas-menu ul li a').on('click', function(e) {
-        e.preventDefault();
-        $('.ofcavas-menu').removeClass('current');
-    });
 
 
-    // Hamburger-menu
-    $('.hamburger-menu').on('click', function() {
-        $('.hamburger-menu .line-top, .ofcavas-menu').toggleClass('current');
-        $('.hamburger-menu .line-center').toggleClass('current');
-        $('.hamburger-menu .line-bottom').toggleClass('current');
-    });
 
 
-    $('.ofcavas-menu ul li a').on('click', function() {
-        $('.hamburger-menu .line-top, .ofcavas-menu').removeClass('current');
-        $('.hamburger-menu .line-center').removeClass('current');
-        $('.hamburger-menu .line-bottom').removeClass('current');
-    });
-
-
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: (target.offset().top - 88)
-                }, 1000);
-                return false;
-            }
-        }
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#mainNav',
-        offset: 90
-    });
 
 
 
