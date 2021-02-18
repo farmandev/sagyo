@@ -2,9 +2,10 @@
         Variable 
 -----------------------------------*/
 // Font Family
-$primary_font: 'Averta-regular',
-sans-serif;
-$secondary_font: "Fredoka One";
+$primary_font_RG: 'Averta-Regular';
+$primary_font_SB: 'Averta-SemiBold';
+$primary_font_Bl: 'Averta-Bold';
+$primary_font_LG: 'Averta-Light';
 
 
 $clr_black: #333332;
@@ -19,9 +20,8 @@ $clr_ash:#F0F1FA;
     src: url(../fonts/Averta-Light.otf);
 }
 
-
 @font-face {
-    font-family: 'Averta-regular';
+    font-family: 'Averta-Regular';
     src: url(../fonts/Averta400.otf);
 }
 
@@ -87,14 +87,14 @@ h5,
 h6 {
     margin-bottom: 10px;
     line-height: 1.6;
-    font-family: "Averta-Bold";
+    font-family: $primary_font_BL;
 }
 
 body {
     color: $clr_black;
     font-size: 16px;
     line-height: 21px;
-    font-family: $primary_font;
+    font-family: $primary_font_RG;
     overflow-x: hidden !important;
 }
 
@@ -449,7 +449,7 @@ a:hover {
             padding: 10px 21px 10px;
             font-size: 16px;
             line-height: 21px;
-            font-family: "Averta-SemiBold";
+            font-family: $primary_font_SB;
             color: $clr_blue;
             background: #F0F1FA;
             border-radius: 5px;
@@ -483,7 +483,7 @@ a:hover {
             padding: 10px 21px 10px;
             font-size: 16px;
             line-height: 21px;
-            font-family: "Averta-SemiBold";
+            font-family: $primary_font_SB;
             color: $clr_blue;
             background: #FFF;
             border-radius: 5px;
@@ -527,7 +527,7 @@ a:hover {
             padding: 10px 21px 10px;
             font-size: 16px;
             line-height: 21px;
-            font-family: "Averta-SemiBold";
+            font-family: $primary_font_SB;
             color: $clr_blue;
             background: #FFF;
             border-radius: 5px;
@@ -592,7 +592,7 @@ a:hover {
         line-height: 27px;
 
         span {
-            font-family: "Averta-SemiBold";
+            font-family: $primary_font_SB;
         }
     }
 }
@@ -620,7 +620,7 @@ a:hover {
         line-height: 27px;
 
         span {
-            font-family: "Averta-SemiBold";
+            font-family: $primary_font_SB;
         }
     }
 }
@@ -631,6 +631,14 @@ a:hover {
 
 .bg-grey {
     background-color: $clr_ash;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.bg-white {
+    background-color: $clr_white;
 }
 
 .bg-grad {
@@ -830,7 +838,7 @@ a:hover {
                                     font-size: 12px;
                                     line-height: 18px;
                                     color: #3F35FF;
-                                    font-family: "Averta-Regular";
+                                    font-family:$primary_font_RG;
                                     font-weight: 800;
                                     margin: 0;
                                     display: block;
@@ -900,7 +908,7 @@ a:hover {
                 h6 {
                     font-size: 16px;
                     line-height: 18px;
-                    font-family: "Averta-Bold";
+                    font-family: $primary_font_BL;
                     display: block;
                     position: relative;
                     padding-right: 10px;
@@ -994,24 +1002,9 @@ a:hover {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------Footer CSS-----*/
-
+/*-------------------------------
+         Footer CSS
+-------------------------------*/
 .footer-wrap {
     background: linear-gradient(90deg, rgba(110, 3, 247, 1) 0%, rgba(72, 41, 255, 1) 35%, rgba(0, 210, 223, 1) 100%);
     padding: 32px 0;
@@ -1063,626 +1056,4 @@ a:hover {
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.hero-content {
-    img {
-        margin: 0 0 25px;
-    }
-
-    h2 {
-        font-size: 28px;
-        position: relative;
-        padding: 0 0 20px;
-
-        &::before {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            content: "";
-            background: linear-gradient(90deg, rgb(59, 76, 249) 0%, rgba(59, 76, 249, 0.6446779395351891) 42%, rgba(240, 241, 250, 0.29173676306460083) 100%);
-
-            width: 80px;
-            height: 2px;
-        }
-    }
-}
-
-.working-hours {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 0 15px;
-    padding: 16px;
-    z-index: 9;
-    position: relative;
-    box-shadow: -12px 11px 16px -10px rgba(135, 136, 141, 0.15);
-
-    .working-hours-left {
-        p {
-            font-size: 14px;
-            line-height: 18px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin: 0;
-
-            span {
-                display: block;
-                opacity: 0.8;
-            }
-        }
-    }
-
-    .working-hours-right {
-        h6 {
-            font-size: 19px;
-            line-height: 21px;
-            color: $clr_blue;
-            margin: 0;
-        }
-
-    }
-
-}
-
-.step-wrap {
-    max-width: 60%;
-
-    .step-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-
-
-        p {
-            margin: 0;
-            font-family: "Averta-SemiBold";
-            font-weight: 300;
-
-            img {
-                position: relative;
-                top: 11px;
-                right: 0;
-            }
-        }
-
-        span {
-            color: $clr_blue;
-            font-size: 20px;
-        }
-    }
-
-}
-
-
-
-p.step-info {
-    font-size: 14px;
-    line-height: 18px;
-    color: #7E8299;
-
-    span {
-        font-family: "Averta-semibold"
-    }
-}
-
-
-.step-bar {
-    width: 100%;
-    height: 6px;
-    display: block;
-    background: #DDDFEF;
-    margin: 10px 0;
-    border-radius: 50px;
-    position: relative;
-
-    &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
-        width: 25%;
-        height: 6px;
-        border-radius: 50px;
-    }
-}
-
-
-.mission-slider-wrap {
-    margin: 30px 0;
-    position: relative;
-    overflow-x: hidden;
-}
-
-
-.mission-slider-wrap.v1:after,
-.mission-slider-wrap.v2:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: "";
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1600841020001751) 0%, rgba(255, 255, 255, 0.4205883036808473) 35%, rgba(240, 241, 250, 0.6894958667060574) 100%);
-    width: 25%;
-    height: 100%;
-}
-
-.mission-slider-item {
-    border: 1px solid #DCDEEF;
-    border-radius: 15px;
-    text-align: center;
-    padding: 0 20px 18px;
-    margin: 5px 10px 25px;
-    box-shadow: 0 10px 21px -3px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-
-.mission-item-title {
-    h4 {
-        font-size: 16px;
-        line-height: 21px;
-        color: $clr_blue;
-        margin: 0;
-        text-transform: uppercase;
-    }
-
-    h5 {
-        font-size: 16px;
-        line-height: 21px;
-        margin: 0;
-    }
-
-    h6 {
-        font-size: 14px;
-        line-height: 19px;
-        color: #7E8299;
-        margin: 0 0 30px;
-    }
-}
-
-.mission-item-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-top: 1px solid #F0F1FA;
-    border-bottom: 1px solid #F0F1FA;
-    padding: 12px 0;
-
-    .mission-item-info-left {
-        p {
-            font-size: 14px;
-            line-height: 21px;
-            font-family: "Averta-SemiBold";
-            margin: 0;
-        }
-    }
-
-}
-
-.mission-item-info:nth-child(1) {
-    border-bottom: none;
-}
-
-.pr-btn {
-    font-size: 14px;
-    line-height: 21px;
-    text-transform: uppercase;
-    font-family: "Averta-SemiBold";
-    margin: 0;
-    background-color: #1AC583;
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.create-mission-wrap {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 5% 60px;
-}
-
-.create-mission-box-wrap {
-    position: relative;
-    display: block;
-    background-clip: padding-box;
-    position: relative;
-    padding: 2px;
-    border-radius: 8px;
-    background-image: linear-gradient(90deg, rgba(108, 4, 248, 1) 0%, rgba(28, 102, 255, 1) 35%, rgba(23, 194, 238, 1) 100%);
-    border: none;
-    transition: 0.3s;
-
-
-}
-
-.create-mission-box {
-    display: block;
-    background: #fff;
-    border-radius: 10px;
-    transition: 0.3s;
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 9;
-    position: relative;
-
-}
-
-.create-mission-box a.btn.v1 {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px 35px 12px;
-    font-family: "Averta-SemiBold";
-}
-
-.create-mission-box-wrap {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-align: center;
-    min-height: 420px;
-
-}
-
-.create-mission-box-wrap img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.6;
-}
-
-.create-mission-left {
-    width: 45%;
-}
-
-.create-mission-right {
-    width: 50%;
-}
-
-.create-mission-box h4 {
-    font-size: 27px;
-    line-height: 32px;
-    font-family: "Averta-Regular";
-    margin: 0 0 32px;
-}
-
-.create-mission-box h4 span {
-    font-family: "Averta-SemiBold";
-}
-
-.filter-btn-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    max-width: 1320px;
-    padding: 0 15px;
-}
-
-.filter-btn a {
-    font-size: 24px;
-    line-height: 27px;
-    font-family: "Averta-SemiBold";
-    display: inline-block;
-    background: linear-gradient(90deg, rgba(247, 248, 252, 1) 0%, rgba(253, 253, 254, 1) 35%, rgba(255, 255, 255, 1) 100%);
-    border-radius: 3px;
-    padding: 5px 50px 5px 10px;
-
-}
-
-.filter-btn.v2 a {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(247, 248, 252, 1) 35%, rgba(240, 241, 250, 1) 100%);
-
-}
-
-.mission-item-info-right p {
-    margin: 0;
-    color: $clr_grey;
-    font-size: 14px;
-}
-
-.mission-item-info-right span {
-    font-size: 14px;
-    line-height: 21px;
-    color: #fff;
-    background: #1AC583;
-    display: inline-block;
-    line-height: 1;
-    padding: 6px 10px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-family: "Averta-SemiBold";
-}
-
-.mission-item-info:last-child {
-    margin: 0 0 20px;
-}
-
-.mission-action-btn {
-    margin: 20px 0 0;
-}
-
-
-.create-mission-agent {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    background: #F0F1FA;
-    border-radius: 10px;
-    padding: 20px 35px;
-    margin: 24px 0 0;
-}
-
-.mission-agent-contact {
-    margin-left: 30px;
-}
-
-.mission-agent-contact {
-    width: 65%;
-}
-
-.mission-agent-img img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.mission-agent-contact h5 {
-    font-size: 18px;
-    line-height: 22px;
-    margin: 0 0 5px;
-    text-transform: uppercase;
-    font-family: "Averta-SemiBold";
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.mission-agent-contact a {
-    display: block;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 0 0 8px;
-}
-
-.mission-agent-contact a i {
-    color: $clr_blue;
-    margin-right: 10px;
-
-}
-
-.create-mission-info h3 {
-    font-size: 27px;
-    line-height: 32px;
-    font-family: "Averta-SemiBold";
-}
-
-.create-mission-info p {
-    font-size: 20px;
-    line-height: 26px;
-}
-
-.create-mission-info p span {
-    font-family: "Averta-Semibold";
-}
-
-/*------------------------------
-       Cta Section CSS
----------------------------------*/
-
-.cta-wrap {
-    background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112728685224) 14%, rgba(58, 59, 255, 1) 50%, rgba(0, 211, 223, 1) 100%);
-    color: #fff;
-
-    .container {
-        position: relative;
-        z-index: 9;
-
-        .cta-text {
-            position: relative;
-
-            .shape-one {
-                position: absolute;
-                bottom: -97px;
-                left: 0;
-                width: 80%;
-                z-index: -1;
-                opacity: 0.1;
-            }
-
-            h3 {
-                font-size: 28px;
-                line-height: 34px;
-                font-family: "Averta-Regular";
-                font-weight: 600;
-                margin: 0 0 30px;
-            }
-
-        }
-    }
-}
-
-.support-info {
-    background: linear-gradient(90deg, rgba(66, 127, 255, 1) 0%, rgba(49, 144, 246, 1) 35%, rgba(40, 165, 255, 1) 100%);
-    text-align: center;
-    padding: 46px 0;
-
-    img {
-        margin: 0 auto 30px;
-        display: block;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-
-    h4 {
-        font-size: 16px;
-        line-height: 21px;
-        font-family: "Averta-SemiBold";
-        text-transform: uppercase;
-        margin: 0 0 6px;
-    }
-
-    a {
-        color: #fff;
-        display: block;
-    }
-}
-
-.user-mission-area {
-    .user-mission-wrap {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        position: relative;
-
-        .user-mission-item {
-            width: 32%;
-            background: #F0F1FA;
-            margin: 0 0.5% 15px;
-            padding: 20px;
-            border-radius: 10px;
-            position: relative;
-
-            &.v1 {
-                text-align: center;
-                background-clip: padding-box;
-                position: relative;
-                padding: 2px;
-                border-radius: 12px;
-                background-image: linear-gradient(90deg, #7500f3 0%, #531bff 46%, #0097ff 77%, #00f5c5 100%);
-
-                .user-mission-invite {
-                    display: block;
-                    background-color: #fff;
-                    padding: 10px 21px 10px;
-                    background: #fff;
-                    border-radius: 10px;
-
-                }
-            }
-
-            .close-item {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-
-            .user-stat {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-
-                h5 {
-                    font-size: 18px;
-                    line-height: 22px;
-                    margin: 0;
-                }
-
-                h6 {
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    margin: 0;
-                }
-
-                p {
-                    opacity: 0.8;
-                }
-
-                span {
-                    color: $clr_blue;
-                    font-size: 20px;
-                    font-family: "Averta-Bold";
-                    display: block;
-                }
-            }
-
-        }
-
-    }
-}
-
-
-.invite-popup {
-    text-align: center;
-
-    .user-mission-item.v1 {
-        margin: 30px auto 0;
-        box-shadow: 6px 9px 19px 3px rgba(0, 0, 0, 0.1);
-    }
-}
-
-
-.user-mission-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-color: rgb(240, 241, 250, 0.6);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-
-// .popup-front{
-//     display: block;
-// }
-// .popup-back{
-//     display: block;
-// }
-// .home.open .user-mission-hover,
-// .home.open .create-mission-wrap,
-// .home .filter-btn-wrap,
-// .home .mission-slider-wrap.v1,
-// .home .mission-slider-wrap.v1 {
-//     display: none;
-// }
-// .home .user-mission-hover,
-// .home .create-mission-wrap,
-// .home.open .filter-btn-wrap,
-// .home.open .mission-slider-wrap.v1,
-// .home.open .mission-slider-wrap.v1 {
-//     display: block!important;
-// }
-
-// .pop-back {
-//     filter: blur(10px);
-// }
-
-// .home.open .pop-back {
-//     filter: blur(0);
-// }
-
-// .home.open .step-bar:before {
-//     width: 75%;
-// }
-
-// .cta-wrap {
-//     display: none;
-// }
-
-// .home.open .cta-wrap {
-//     display: block;
-// }
-.user-action-btn {
-    margin: 15px 0 0;
 }

@@ -31,7 +31,7 @@
         $('.body_overlay').toggleClass('open');
         $(this).toggleClass('open');
     });
-     $('.pop-btn').on('click', function() {
+    $('.pop-btn').on('click', function() {
         $('.home').addClass('open');
         $('.create-mission-wrap').addClass('d-none');
         $('.filter-btn-wrap').removeClass('d-none');
@@ -66,11 +66,31 @@
         // slidesToShow: 1,
         // slidesToScroll: 1,
         responsive: [{
-            breakpoint: 1439,
-            settings: {
-                slidesToShow: 3,
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
             }
-        }]
+
+        ]
     });
     $('.mission-slider-two').slick({
         slidesToShow: 4,
@@ -83,11 +103,31 @@
         // slidesToShow: 1,
         // slidesToScroll: 1,
         responsive: [{
-            breakpoint: 1439,
-            settings: {
-                slidesToShow: 3,
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
             }
-        }]
+
+        ]
     });
 
     // Show or hide the sticky footer button

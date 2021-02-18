@@ -642,4 +642,9 @@ $sm: 'only screen and (min-width: 320px) and (max-width: 767px)';
         margin: 0 0 20px;
     }
 
+    .mission-slider-wrap.v1::after,
+    .mission-slider-wrap.v2::after {
+        display: none;
+    }
+
 }

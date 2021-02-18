@@ -684,7 +684,10 @@
     background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112729) 14%, #3a3bff 50%, #00d3df 100%);
     padding: 10px 0 15px 0;
 
-    .filter-item-wrap {
+    
+}
+
+.filter-item-wrap {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -754,9 +757,6 @@
             }
         }
     }
-}
-
-
 
 .mission-slider-wrap.v6 {
     margin: 0;
