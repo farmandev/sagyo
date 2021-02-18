@@ -1,3 +1,7 @@
+/*-----------------------------------
+            Mission Page CSS
+-----------------------------------*/
+
 .content-wrap {
     margin: 82px 0 0;
 }
@@ -30,11 +34,13 @@
     &.s1 {
         border: none;
         box-shadow: none;
+        padding: 0;
+        margin-bottom: 0;
 
         .mission-item-title {
             h4 {
                 font-size: 22px;
-                line-height: 21px;
+                line-height: 25px;
                 color: #3B4CF9;
                 margin: 0 0 8px;
 
@@ -44,6 +50,8 @@
             h5 {
                 font-size: 18px;
                 margin: 0 0 8px;
+                font-family: "Averta-Regular";
+                font-weight: 600;
 
             }
 
@@ -52,48 +60,63 @@
             }
 
             .pr-btn {
-                padding: 3px 20px;
+                padding: 3px 15px;
+            }
+        }
+    }
+
+    .mission-slider-item-img {
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.tab-area {
+    .nav.nav-tabs {
+        background: #F0F1FA;
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        border: none;
+
+        li {
+            a {
+                font-size: 20px;
+                line-height: 20px;
+                color: #707070;
+                margin: 0 26px;
+
+                &.active {
+                    color: #3B4CF9;
+                    font-family: "Averta-Semibold";
+                }
+
             }
         }
     }
 }
 
 
-.tab-area .nav.nav-tabs {
-    background: #F0F1FA;
-    padding: 30px 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    border: none;
-}
-
-
-.tab-area .nav.nav-tabs li a {
-    font-size: 20px;
-    line-height: 20px;
-    color: #707070;
-    margin: 0 26px;
-}
-
-.tab-area .nav.nav-tabs li a.active {
-    color: #3B4CF9;
-    font-family: "Averta-Semibold";
-}
 
 /*Delivery*/
-.delivery-wrap h2 {
-    font-size: 48px;
-    line-height: 50px;
-    text-align: center;
-}
+.delivery-wrap {
+    h2 {
+        font-size: 48px;
+        line-height: 50px;
+        text-align: center;
+    }
 
-.delivery-wrap h4 {
-    font-size: 32px;
-    line-height: 50px;
-    text-align: center;
-    font-family: "Averta-Light";
+    h4 {
+        font-size: 32px;
+        line-height: 50px;
+        text-align: center;
+        font-family: "Averta-Light";
+    }
 }
 
 .delivery-note {
@@ -231,6 +254,20 @@
 
                 &.active {
                     color: #462FFE;
+                }
+            }
+        }
+    }
+
+    &.v2 {
+        ul {
+            li {
+                a {
+                    opacity: 0.5;
+
+                    &.active {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -510,10 +547,9 @@
 
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 0;
+    margin: 16px 0;
 
 
-    max-height: 50%;
 
     .chat-img {
         width: 60px;
@@ -646,7 +682,7 @@
 
 .filter-area {
     background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112729) 14%, #3a3bff 50%, #00d3df 100%);
-    padding: 60px 0;
+    padding: 10px 0 15px 0;
 
     .filter-item-wrap {
         display: flex;
@@ -694,22 +730,42 @@
                         input {
                             height: 40px;
                             border: none;
-                            background-color: $clr_white;
-                            font-size: 13px;
-                            padding: 0 4px 0 0;
+                            background-color: #fff;
+                            border-radius: 5px;
+                            padding: 0 12px;
+                            font-size: 14px;
+
+                            ::placeholder {
+                                // opacity: 0.7;
+                            }
                         }
 
                         span {
                             position: absolute;
-                            top: 0;
-                            right: 8px;
+                            top: 8px;
+                            right: 13px;
                             padding: 0 4px;
                             cursor: pointer;
                             color: #3B4CF9;
+                            font-size: 18px;
                         }
                     }
                 }
             }
         }
     }
+}
+
+
+
+.mission-slider-wrap.v6 {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.mission-slider-wrap.v6 .mission-slider-item {
+    width: 31.7%;
+    margin: 0 0.8% 20px;
 }

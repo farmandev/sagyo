@@ -583,8 +583,8 @@ a:hover {
 
     h2 {
         font-size: 39px;
-        line-height: 27px;
-        margin: 0 0 10px;
+        line-height: 44px;
+        margin: 0 0 5px;
     }
 
     p {
@@ -603,6 +603,7 @@ a:hover {
 
     &.v2 {
         text-align: left;
+
         h3 {
             margin: 0 0 5px;
         }
@@ -623,9 +624,11 @@ a:hover {
         }
     }
 }
-.text-blue{
-    color: $clr_blue!important;
+
+.text-blue {
+    color: $clr_blue !important;
 }
+
 .bg-grey {
     background-color: $clr_ash;
 }
@@ -669,7 +672,8 @@ a:hover {
 }
 
 .section-padding {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /*-------------------------------
@@ -1006,7 +1010,7 @@ a:hover {
 
 
 
-/*------main menu-----*/
+/*------Footer CSS-----*/
 
 .footer-wrap {
     background: linear-gradient(90deg, rgba(110, 3, 247, 1) 0%, rgba(72, 41, 255, 1) 35%, rgba(0, 210, 223, 1) 100%);
@@ -1061,34 +1065,28 @@ a:hover {
     background-repeat: no-repeat;
 }
 
-// .shape-two{
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     max-width: 50%;
-//     z-index: 0;
-// }
-.hero-content img {
-    margin: 0 0 25px;
-}
+.hero-content {
+    img {
+        margin: 0 0 25px;
+    }
 
-.hero-content h2 {
-    font-size: 28px;
-    position: relative;
-    padding: 0 0 20px;
+    h2 {
+        font-size: 28px;
+        position: relative;
+        padding: 0 0 20px;
 
-    &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        background: linear-gradient(90deg, rgb(59, 76, 249) 0%, rgba(59, 76, 249, 0.6446779395351891) 42%, rgba(240, 241, 250, 0.29173676306460083) 100%);
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: linear-gradient(90deg, rgb(59, 76, 249) 0%, rgba(59, 76, 249, 0.6446779395351891) 42%, rgba(240, 241, 250, 0.29173676306460083) 100%);
 
-        width: 80px;
-        height: 2px;
+            width: 80px;
+            height: 2px;
+        }
     }
 }
-
 
 .working-hours {
     display: flex;
@@ -1128,39 +1126,37 @@ a:hover {
 
 }
 
-
-
-
-
 .step-wrap {
     max-width: 60%;
 
-}
-
-.step-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    .step-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
 
 
-    p {
-        margin: 0;
-        font-family: "Averta-SemiBold";
-        font-weight: 300;
+        p {
+            margin: 0;
+            font-family: "Averta-SemiBold";
+            font-weight: 300;
 
-        img {
-            position: relative;
-            top: 11px;
-            right: 0;
+            img {
+                position: relative;
+                top: 11px;
+                right: 0;
+            }
+        }
+
+        span {
+            color: $clr_blue;
+            font-size: 20px;
         }
     }
 
-    span {
-        color: $clr_blue;
-        font-size: 20px;
-    }
 }
+
+
 
 p.step-info {
     font-size: 14px;
@@ -1217,36 +1213,39 @@ p.step-info {
     border: 1px solid #DCDEEF;
     border-radius: 15px;
     text-align: center;
-    padding: 30px 20px 18px;
+    padding: 0 20px 18px;
     margin: 5px 10px 25px;
     box-shadow: 0 10px 21px -3px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
-.mission-slider-item img {
-    display: block;
-    margin: 0 auto 25px;
-}
 
-.mission-item-title h4 {
-    font-size: 16px;
-    line-height: 21px;
-    color: $clr_blue;
-    margin: 0;
-    text-transform: uppercase;
-}
+.mission-item-title {
+    h4 {
+        font-size: 16px;
+        line-height: 21px;
+        color: $clr_blue;
+        margin: 0;
+        text-transform: uppercase;
+    }
 
-.mission-item-title h5 {
-    font-size: 16px;
-    line-height: 21px;
-    margin: 0;
-}
+    h5 {
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0;
+    }
 
-.mission-slider-item h6 {
-    font-size: 14px;
-    line-height: 19px;
-    color: #7E8299;
-    margin: 0 0 30px;
+    h6 {
+        font-size: 14px;
+        line-height: 19px;
+        color: #7E8299;
+        margin: 0 0 30px;
+    }
 }
 
 .mission-item-info {
@@ -1257,17 +1256,20 @@ p.step-info {
     border-top: 1px solid #F0F1FA;
     border-bottom: 1px solid #F0F1FA;
     padding: 12px 0;
+
+    .mission-item-info-left {
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            font-family: "Averta-SemiBold";
+            margin: 0;
+        }
+    }
+
 }
 
 .mission-item-info:nth-child(1) {
     border-bottom: none;
-}
-
-.mission-item-info-left p {
-    font-size: 14px;
-    line-height: 21px;
-    font-family: "Averta-SemiBold";
-    margin: 0;
 }
 
 .pr-btn {
@@ -1279,7 +1281,7 @@ p.step-info {
     background-color: #1AC583;
     display: inline-block;
     padding: 3px 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     color: #fff;
 }
 
@@ -1619,18 +1621,6 @@ p.step-info {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .invite-popup {
     text-align: center;
 
@@ -1693,3 +1683,6 @@ p.step-info {
 // .home.open .cta-wrap {
 //     display: block;
 // }
+.user-action-btn {
+    margin: 15px 0 0;
+}
