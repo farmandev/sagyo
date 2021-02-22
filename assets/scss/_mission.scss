@@ -61,6 +61,7 @@
 
             .pr-btn {
                 padding: 3px 15px;
+
             }
         }
     }
@@ -100,6 +101,7 @@
         }
     }
 }
+
 
 
 
@@ -570,7 +572,7 @@
         margin: 0 0 7px;
 
         span {
-            font-family: "$primary_font_RG";
+            font-family: $primary_font_RG;
             margin-left: 20px;
         }
 
@@ -649,6 +651,12 @@
         }
     }
 
+}
+
+.chat-item-wrap {
+    margin: 20px 0 0;
+    height: 650px;
+    overflow: auto;
 }
 
 .chat-field {

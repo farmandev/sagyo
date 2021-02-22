@@ -199,7 +199,7 @@ a:hover {
   height: 100%;
   border-style: solid;
   /* Spinner Color */
-  border-color: #42768C #42768C transparent;
+  border-color: #3B4CF9 #3B4CF9 transparent;
   border-radius: 50%;
   border-width: 6px;
 }
@@ -327,6 +327,10 @@ a:hover {
     transform: rotate(-130deg);
   }
 }
+.btn {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .btn.v1 {
   font-size: 16px;
   line-height: 21px;
@@ -337,7 +341,6 @@ a:hover {
   border: none;
   border-radius: 7px;
   box-shadow: none;
-  transition: 0.3s;
 }
 .btn.v1:hover {
   color: #fff;
@@ -353,11 +356,10 @@ a:hover {
   border: none;
   border-radius: 7px;
   box-shadow: none;
-  transition: 0.3s;
 }
 .btn.v2:hover {
+  background: linear-gradient(90deg, #03a8f3 0%, #2f59fb 35%, #6b05f9 100%);
   color: #fff;
-  background: #00BBB4;
 }
 .btn.v3 {
   display: block;
@@ -368,7 +370,6 @@ a:hover {
   border-radius: 8px;
   background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
   border: none;
-  transition: 0.3s;
 }
 .btn.v3 span {
   display: block;
@@ -379,7 +380,8 @@ a:hover {
   color: #3B4CF9;
   background: #F0F1FA;
   border-radius: 5px;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn.v3:hover {
   background-image: none;
@@ -394,9 +396,9 @@ a:hover {
   background-clip: padding-box;
   position: relative;
   padding: 2px;
+  border: none;
   border-radius: 8px;
   background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
-  transition: 0.3s;
 }
 .btn.v4 span {
   display: block;
@@ -407,6 +409,12 @@ a:hover {
   color: #3B4CF9;
   background: #FFF;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn.v4:hover span {
+  background: transparent;
+  color: #fff;
 }
 .btn.v5 {
   font-size: 16px;
@@ -418,11 +426,10 @@ a:hover {
   border: none;
   border-radius: 7px;
   box-shadow: none;
-  transition: 0.3s;
 }
 .btn.v5:hover {
-  color: #3B4CF9;
-  background: linear-gradient(90deg, #670bf9 0%, #472eff 35%, #00aef2 100%);
+  color: #fff;
+  background: linear-gradient(90deg, #03a8f3 0%, #2f59fb 35%, #6b05f9 100%);
 }
 .btn.v6 {
   display: block;
@@ -432,7 +439,6 @@ a:hover {
   padding: 2px;
   border-radius: 8px;
   background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
-  transition: 0.3s;
 }
 .btn.v6 span {
   display: block;
@@ -558,6 +564,7 @@ a:hover {
 .body_overlay.open {
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 
 .pt-60 {
@@ -618,12 +625,14 @@ a:hover {
   text-transform: capitalize;
   position: relative;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: "Averta-Regular";
   font-weight: 500;
   text-align: center;
   transition: 0.4s;
   color: #7E8299;
-  padding: 8px 20px;
+  padding: 8px 18px;
   margin: 0 2px;
   border-radius: 5px;
   transition: 0.3s;
@@ -816,9 +825,11 @@ a:hover {
   border-top: 1px solid #ddd;
   transform: rotate(-45deg);
   border-right: 1px solid #ddd;
+  z-index: 0;
 }
-.header-wrap .header-right .client-option .client-menu ul li:nth-child(even) a {
-  background: #EAEBF5;
+.header-wrap .header-right .client-option .client-menu ul li {
+  z-index: 9;
+  position: relative;
 }
 .header-wrap .header-right .client-option .client-menu ul li a {
   display: block;
@@ -826,6 +837,11 @@ a:hover {
   font-size: 12px;
   line-height: 12px;
   text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header-wrap .header-right .client-option .client-menu ul li a:hover {
+  background: #EAEBF5;
 }
 .header-wrap .header-left,
 .header-wrap .header-notification,
@@ -1000,6 +1016,7 @@ p.step-info span {
 }
 
 .mission-slider-item {
+  position: relative;
   border: 1px solid #DCDEEF;
   border-radius: 15px;
   text-align: center;
@@ -1007,6 +1024,11 @@ p.step-info span {
   margin: 5px 10px 25px;
   box-shadow: 0 10px 21px -3px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+.mission-slider-item .close-mission {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 .mission-slider-item img {
   display: block;
@@ -1045,8 +1067,16 @@ p.step-info span {
 .mission-item-info .mission-item-info-left p {
   font-size: 14px;
   line-height: 21px;
-  font-family: "$primary_font_SB";
+  font-family: "Averta-SemiBold";
   margin: 0;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
 }
 
 .mission-item-info:nth-child(1) {
@@ -1059,11 +1089,25 @@ p.step-info span {
   text-transform: uppercase;
   font-family: "Averta-SemiBold";
   margin: 0;
-  background-color: #1AC583;
   display: inline-block;
   padding: 3px 10px;
   border-radius: 5px;
   color: #fff;
+}
+.pr-btn.s1 {
+  background-color: #26DE97;
+}
+.pr-btn.s2 {
+  background-color: #1AC583;
+}
+.pr-btn.s3 {
+  background-color: #7C1FFF;
+}
+.pr-btn.s4 {
+  background-color: #4C36FE;
+}
+.pr-btn.s5 {
+  background-color: #00BAEF;
 }
 
 .create-mission-wrap {
@@ -1140,7 +1184,7 @@ p.step-info span {
   max-width: 1320px;
   padding: 0 15px;
 }
-.filter-btn-wrap .filter-btn a {
+.filter-btn-wrap .filter-btn span {
   font-size: 24px;
   line-height: 27px;
   font-family: "Averta-SemiBold";
@@ -1150,9 +1194,12 @@ p.step-info span {
   padding: 5px 50px 5px 10px;
 }
 
-.filter-btn.v2 a {
+.filter-btn.v2 span {
   background: linear-gradient(90deg, white 0%, #f7f8fc 35%, #f0f1fa 100%);
   padding: 10px;
+  font-family: "Averta-SemiBold";
+  font-size: 24px;
+  line-height: 27px;
 }
 
 .mission-item-info-right p {
@@ -1245,6 +1292,7 @@ p.step-info span {
 .cta-wrap {
   background: linear-gradient(90deg, rgba(110, 3, 247, 0.9780112729) 14%, #3a3bff 50%, #00d3df 100%);
   color: #fff;
+  overflow: hidden;
 }
 .cta-wrap .container {
   position: relative;
@@ -1360,14 +1408,23 @@ p.step-info span {
   display: block;
 }
 
+.user-mission-area.s1 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ddd;
+  height: 750px;
+  padding: 0 15px;
+}
+
 .invite-popup {
   text-align: center;
 }
 .invite-popup .user-mission-item.v1 {
-  margin: 30px auto 0;
+  margin: 0 auto 0;
   box-shadow: 6px 9px 19px 3px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  width: auto;
   background-clip: padding-box;
   position: relative;
   padding: 2px;
@@ -1375,16 +1432,26 @@ p.step-info span {
   background-image: linear-gradient(90deg, #6c04f8 0%, #1c66ff 35%, #17c2ee 100%);
   border: none;
   transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .invite-popup .user-mission-item.v1 .user-mission-invite {
   display: inline-block;
-  padding: 10px 21px 10px;
+  padding: 10px 21px 14px;
   font-size: 16px;
   line-height: 21px;
   background: #fff;
   border-radius: 5px;
   transition: 0.3s;
-  width: auto;
+}
+.invite-popup .user-mission-item.v1 .user-mission-invite h4 {
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "Averta-SemiBold";
+  font-weight: 300;
+  margin: 0 0 13px;
 }
 
 .user-mission-hover {
@@ -1861,7 +1928,7 @@ p.step-info span {
   margin: 0 0 7px;
 }
 .chat-item .chat-name span {
-  font-family: "$primary_font_RG";
+  font-family: "Averta-Regular";
   margin-left: 20px;
 }
 .chat-item .chat-msg {
@@ -1918,6 +1985,12 @@ p.step-info span {
 }
 .chat-item.two .chat-msg p {
   color: #333332;
+}
+
+.chat-item-wrap {
+  margin: 20px 0 0;
+  height: 650px;
+  overflow: auto;
 }
 
 .chat-field .search-box {
@@ -2114,6 +2187,16 @@ p.step-info span {
   .brief-wrap .shape-nine {
     right: -30%;
   }
+
+  .header-wrap .header-left .header-menu .main-menu ul li a {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 0;
+  }
+
+  .header-wrap .header-right .header-notification .notifi-icon {
+    margin: 0 24px;
+  }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1360px) {
   .header-wrap .header-left .header-menu .main-menu ul li a {
@@ -2139,19 +2222,14 @@ p.step-info span {
   }
 }
 @media only screen and (min-width: 1400px) {
-  .mission-slider-wrap.v1,
-.mission-slider-wrap.v2 {
-    margin-left: calc((100% - 1320px) / 2 + 15px) !important;
-  }
-
   .filter-btn-wrap,
 .create-mission-wrap {
-    max-width: 1320px;
+    max-width: 1170px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .mission-slider-wrap {
-    margin-left: calc((100% - 1140px) / 2 + 15px);
+    margin-left: calc((100% - 1170px) / 2 + 15px);
   }
 
   .filter-btn-wrap,
@@ -2162,6 +2240,20 @@ p.step-info span {
 @media only screen and (max-width: 1199px) {
   .shape-nine {
     display: none;
+  }
+
+  .client-menu.open ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .notifi-icon.open img {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  .notifi-icon.open .notif-list {
+    visibility: visible;
+    opacity: 1;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2257,7 +2349,7 @@ p.step-info span {
   }
 
   .header-wrap .header-right .client-option .client-logo {
-    margin-right: 20px;
+    margin-right: 38px;
   }
 
   .header-notification .notifi-icon {
@@ -2266,6 +2358,16 @@ p.step-info span {
 
   .brief-wrap .shape-nine {
     right: -40%;
+  }
+
+  .header-wrap .header-left .header-menu .main-menu ul li a {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+  }
+
+  .header-wrap .header-right .header-notification .notifi-icon {
+    margin: 0 20px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2385,6 +2487,7 @@ p.step-info span {
   .header-wrap .header-right .client-option .client-menu.open ul {
     right: -14px;
     left: auto;
+    top: 43px;
   }
 
   .header-wrap .header-right .client-option .client-menu ul::before {
@@ -2475,10 +2578,14 @@ p.step-info span {
     padding: 12px 10px 12px;
   }
 
+  .create-mission-wrap {
+    padding: 32px 5% 60px;
+  }
+
   .create-mission-box a.btn.v1,
 .mission-agent-contact h5,
 .mission-agent-contact a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .create-mission-agent {
@@ -2486,24 +2593,24 @@ p.step-info span {
   }
 
   .mission-agent-contact {
-    width: 60%;
-    margin-left: 15px;
+    width: calc(100% - 90px);
+    text-align: left;
   }
 
   .mission-agent-img img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .cta-wrap .container .cta-text {
-    margin: 50px 0;
+    margin: 50px 0 30px;
     text-align: center;
   }
 
   .support-info {
     background: transparent;
     text-align: center;
-    padding: 10px 0 40px;
+    padding: 0px 0 40px;
   }
 
   .cta-wrap .container .cta-text .shape-one {
@@ -2525,6 +2632,11 @@ p.step-info span {
   }
 }
 /* MD Device :768px. */
+@media only screen and (min-width:768px) {
+  .md-none {
+    display: none !important;
+  }
+}
 /* Extra small Device. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2559,7 +2671,7 @@ p.step-info span {
   }
 
   .xs-none {
-    display: none;
+    display: none !important;
   }
 
   .xs-block {
@@ -2587,16 +2699,27 @@ p.step-info span {
   .header-wrap .header-right .header-notification .notifi-icon .notif-list::before {
     right: 65px;
     left: auto;
-    top: 45px;
+    top: -9px;
   }
 
   .tab-area .nav.nav-tabs {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .tab-area .nav.nav-tabs .nav-item {
+    text-align: left;
+    margin: 0 0 15px;
+  }
+
+  .tab-area .nav.nav-tabs .nav-item {
+    width: 50%;
     text-align: center;
-    margin: 0 0 12px;
+  }
+
+  .tab-area .nav.nav-tabs li a {
+    font-size: 14px;
+    margin: 0 10px;
   }
 
   .brief-para {
@@ -2653,15 +2776,21 @@ p.step-info span {
     margin: 10px 0 0;
   }
 
-  .create-mission-left,
-.create-mission-right {
+  .create-mission-right {
     width: 100% !important;
-    margin: 0 0 25px;
+    text-align: center;
   }
 
-  .create-mission-box,
-.create-mission-box-wrap {
-    min-height: 300px;
+  .create-mission-wrap .create-mission-left {
+    width: 100%;
+    order: 2;
+    margin: 25px 0 0;
+    text-align: left !important;
+  }
+
+  .create-mission-wrap .create-mission-left .create-mission-box,
+.create-mission-wrap .create-mission-left .create-mission-box-wrap {
+    min-height: 350px !important;
     overflow: hidden;
   }
 
@@ -2689,6 +2818,47 @@ p.step-info span {
   .filter-btn a,
 .filter-btn.v2 a {
     margin: 0 0 10px !important;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .invite-popup h3 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+
+  .invite-popup .user-mission-item.v1 {
+    width: calc(100% - 43px);
+    top: 64%;
+  }
+
+  .invite-popup .user-mission-item.v1 .user-mission-invite h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .invite-popup .user-mission-item.v1 .user-mission-invite .btn.v1 {
+    font-size: 12px;
+    line-height: 21px;
+    padding: 8px 25px 10px;
+  }
+
+  .slick-dots li button::before {
+    width: 15px;
+    height: 15px;
+    content: "";
+    opacity: 0.25;
+    color: black;
+    background: linear-gradient(90deg, #6e03f7 0%, #4829ff 35%, #00d2df 100%);
+    border-radius: 50%;
+  }
+
+  .mission-slider-one.slick-dotted.slick-slider,
+.mission-slider-two.slick-dotted.slick-slider {
+    margin-bottom: 50px;
   }
 }
 
